@@ -135,10 +135,27 @@
             prepTitle: '🛡️ 旅の準備', prepDesc: '保険やWi-Fiレンタルなど',
             searchMemoTitle: '🗒️ 検索メモ', searchMemoDesc: '調べた内容をメモしておこう',
             saveMemo: 'メモを保存',
-            // 外貨
-            amount: '金額', fromCurrency: '元の通貨', toCurrency: '変換先の通貨',
-            rate: 'レート（1元の通貨 = ? 先の通貨）', calculate: '計算する',
-            fetchRate: '🌐 最新レートを自動取得',
+            // 天気予報
+            weatherNav: '☁️ 天気予報',
+            weatherCity: '都市名で検索', weatherCityHint: '例：東京、大阪、札幌',
+            weatherSearch: '検索', weatherLoading: '天気情報を取得中...',
+            weatherError: '天気情報の取得に失敗しました', weatherNotFound: '都市が見つかりません',
+            weatherCurrent: '現在の天気', weatherForecastLabel: '7日間予報',
+            weatherTemp: '気温', weatherHigh: '最高', weatherLow: '最低',
+            weatherWind: '風速', weatherHumidity: '湿度',
+            // フォトギャラリー
+            photos: '📸 写真', photosTitle: '📸 フォトギャラリー',
+            addPhotoBtn: '＋ 写真を追加', noPhotos: 'まだ写真がありません',
+            noPhotosHint: '「写真を追加」から旅行の思い出を保存しよう！',
+            deletePhoto: '削除',
+            // 旅の振り返り
+            review: '📊 振り返り', reviewTitle: '📊 旅の振り返り',
+            reviewRating: '旅行の満足度', reviewBest: '一番の思い出',
+            reviewBestHint: '旅行で一番楽しかったことは？',
+            reviewImprove: '次回はこうしたい',
+            reviewImproveHint: '次の旅行で改善したいことは？',
+            reviewNote: '自由メモ', reviewNoteHint: '旅行の感想を自由に書こう',
+            reviewSave: '振り返りを保存', reviewSaved: '✅ 振り返りを保存しました！',
             // 周辺
             getLocation: '📍 現在地を取得', locationHint: '位置情報を取得してください',
             convenience: '🏪 コンビニ', station: '🚉 駅', restaurant: '🍽️ 食事',
@@ -155,7 +172,7 @@
         },
         en: {
             home: 'Home', memoBoard: 'Memo Board', transportSearch: 'Transport & Hotels',
-            currencyCalc: 'Currency', nearbySearch: 'Nearby',
+            weatherNav: '☁️ Weather', nearbySearch: 'Nearby',
             myTripPlans: '🌿 My Trip Plans', newTrip: 'New Trip',
             noTripsYet: 'No trip plans yet',
             noTripsHint: 'Create your first trip with the "New Trip" button!',
@@ -163,6 +180,7 @@
             overview: '🌳 Overview', diary: '📖 Diary', places: '📍 Places',
             todo: '✅ TODO', schedule: '🕐 Schedule', tickets: '🎫 Tickets',
             packing: '👜 Packing', money: '💰 Money', vote: '🗳️ Vote',
+            photos: '📸 Photos', review: '📊 Review',
             prepProgress: '🌳 Preparation Progress', tripInfo: '📋 Trip Info',
             createShiori: '📄 Create Itinerary', reminder: '⏰ Reminders',
             addReminder: '＋ Add Reminder',
@@ -183,7 +201,6 @@
             memoBoardTitle: '📌 Memo Board', addMemo: '＋ Add Memo',
             memoBoardEmpty: '📌 Pin a memo to the board!',
             transportTitle: '🚄 Transport & Hotel Search',
-            currencyTitle: '💱 Currency Converter',
             nearbyTitle: '📍 Nearby Search',
             planTrip: '🗺️ Plan a New Trip', tripName: 'Trip Name',
             departure: 'Departure', returnDate: 'Return', companions: 'Companions',
@@ -246,9 +263,24 @@
             prepTitle: '🛡️ Travel Prep', prepDesc: 'Insurance, Wi-Fi rental, etc.',
             searchMemoTitle: '🗒️ Search Memo', searchMemoDesc: 'Save your research notes',
             saveMemo: 'Save Memo',
-            amount: 'Amount', fromCurrency: 'From', toCurrency: 'To',
-            rate: 'Rate (1 source = ? target)', calculate: 'Calculate',
-            fetchRate: '🌐 Fetch Latest Rate',
+            weatherTitle: '☁️ Weather Forecast',
+            weatherCity: 'Search by City', weatherCityHint: 'e.g. Tokyo, Osaka, Sapporo',
+            weatherSearch: 'Search', weatherLoading: 'Loading weather...',
+            weatherError: 'Failed to get weather', weatherNotFound: 'City not found',
+            weatherCurrent: 'Current Weather', weatherForecastLabel: '7-Day Forecast',
+            weatherTemp: 'Temperature', weatherHigh: 'High', weatherLow: 'Low',
+            weatherWind: 'Wind', weatherHumidity: 'Humidity',
+            photos: '📸 Photos', photosTitle: '📸 Photo Gallery',
+            addPhotoBtn: '＋ Add Photos', noPhotos: 'No photos yet',
+            noPhotosHint: 'Add trip memories with "Add Photos"!',
+            deletePhoto: 'Delete',
+            review: '📊 Review', reviewTitle: '📊 Trip Review',
+            reviewRating: 'Trip Satisfaction', reviewBest: 'Best Memory',
+            reviewBestHint: 'What was the most fun part of the trip?',
+            reviewImprove: 'Next Time I Want To',
+            reviewImproveHint: 'What would you improve for next time?',
+            reviewNote: 'Notes', reviewNoteHint: 'Write your thoughts freely',
+            reviewSave: 'Save Review', reviewSaved: '✅ Review saved!',
             getLocation: '📍 Get Location', locationHint: 'Please get your location',
             convenience: '🏪 Store', station: '🚉 Station', restaurant: '🍽️ Food',
             cafe: '☕ Café', hospital: '🏥 Hospital', atm: '🏧 ATM', toilet: '🚻 Toilet',
@@ -420,6 +452,8 @@
         if (tab === 'packing') renderPacking();
         if (tab === 'money') { renderBudget(); renderExpenses(); }
         if (tab === 'vote') renderPolls();
+        if (tab === 'photos') renderPhotos();
+        if (tab === 'review') renderReview();
     }
 
     // ========== ダッシュボード ==========
@@ -1712,9 +1746,26 @@
         // しおり
         $('#btnExportShiori').addEventListener('click', exportShiori);
 
-        // 外貨計算機
-        $('#btnConvertCurrency').addEventListener('click', convertCurrency);
-        $('#btnFetchRate').addEventListener('click', fetchExchangeRate);
+        // 天気予報
+        $('#btnSearchWeather').addEventListener('click', searchWeather);
+        $('#weatherCityInput').addEventListener('keypress', (e) => { if (e.key === 'Enter') searchWeather(); });
+
+        // フォトギャラリー
+        $('#btnAddPhoto').addEventListener('click', () => $('#photoFileInput').click());
+        $('#photoFileInput').addEventListener('change', handleGalleryUpload);
+
+        // 旅の振り返り
+        $('#btnSaveReview').addEventListener('click', saveReview);
+        document.querySelectorAll('#reviewStars .star').forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = parseInt(star.dataset.star);
+                document.querySelectorAll('#reviewStars .star').forEach((s, i) => {
+                    s.textContent = i < rating ? '★' : '☆';
+                    s.classList.toggle('active', i < rating);
+                });
+                document.getElementById('reviewStars').dataset.rating = rating;
+            });
+        });
 
         // 周辺検索
         $('#btnGetLocation').addEventListener('click', getLocation);
@@ -1746,6 +1797,205 @@
         showView('dashboard');
     }
 
+    // ========== 天気予報 ==========
+    const CITY_COORDS = {
+        '東京': { lat: 35.6762, lng: 139.6503 }, '大阪': { lat: 34.6937, lng: 135.5023 },
+        '札幌': { lat: 43.0618, lng: 141.3545 }, '福岡': { lat: 33.5904, lng: 130.4017 },
+        '名古屋': { lat: 35.1815, lng: 136.9066 }, '京都': { lat: 35.0116, lng: 135.7681 },
+        '神戸': { lat: 34.6901, lng: 135.1956 }, '広島': { lat: 34.3853, lng: 132.4553 },
+        '仙台': { lat: 38.2682, lng: 140.8694 }, '那覇': { lat: 26.2124, lng: 127.6809 },
+        '横浜': { lat: 35.4437, lng: 139.638 }, '奈良': { lat: 34.6851, lng: 135.8048 },
+        '金沢': { lat: 36.5613, lng: 136.6562 }, '熊本': { lat: 32.8032, lng: 130.7079 },
+        '鹿児島': { lat: 31.5966, lng: 130.5571 }, '長崎': { lat: 32.7503, lng: 129.8779 },
+        'tokyo': { lat: 35.6762, lng: 139.6503 }, 'osaka': { lat: 34.6937, lng: 135.5023 },
+        'sapporo': { lat: 43.0618, lng: 141.3545 }, 'fukuoka': { lat: 33.5904, lng: 130.4017 },
+        'nagoya': { lat: 35.1815, lng: 136.9066 }, 'kyoto': { lat: 35.0116, lng: 135.7681 },
+        'naha': { lat: 26.2124, lng: 127.6809 }, 'yokohama': { lat: 35.4437, lng: 139.638 },
+    };
+
+    const WEATHER_ICONS = {
+        0: '☀️', 1: '🌤️', 2: '⛅', 3: '☁️', 45: '🌫️', 48: '🌫️',
+        51: '🌦️', 53: '🌧️', 55: '🌧️', 61: '🌧️', 63: '🌧️', 65: '🌧️',
+        71: '🌨️', 73: '🌨️', 75: '🌨️', 77: '🌨️', 80: '🌦️', 81: '🌧️',
+        82: '⛈️', 85: '🌨️', 86: '🌨️', 95: '⛈️', 96: '⛈️', 99: '⛈️',
+    };
+    const WEATHER_DESC_JA = {
+        0: '快晴', 1: 'ほぼ晴れ', 2: '一部曇り', 3: '曇り', 45: '霧', 48: '着氷霧',
+        51: '小雨', 53: '雨', 55: '強い雨', 61: '小雨', 63: '雨', 65: '大雨',
+        71: '小雪', 73: '雪', 75: '大雪', 77: 'みぞれ', 80: 'にわか雨', 81: '雨',
+        82: '激しい雨', 85: '小雪', 86: '大雪', 95: '雷雨', 96: '雷雨・雹', 99: '激しい雷雨',
+    };
+
+    async function searchWeather() {
+        const input = $('#weatherCityInput').value.trim();
+        if (!input) return;
+        const resultEl = $('#weatherResult');
+        const forecastEl = $('#weatherForecast');
+        resultEl.innerHTML = `<div style="text-align:center;padding:20px;color:var(--text-muted)">${t('weatherLoading')}</div>`;
+        forecastEl.innerHTML = '';
+        try {
+            let lat, lng, cityName = input;
+            const lower = input.toLowerCase();
+            if (CITY_COORDS[input] || CITY_COORDS[lower]) {
+                const c = CITY_COORDS[input] || CITY_COORDS[lower];
+                lat = c.lat; lng = c.lng;
+            } else {
+                const geoRes = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(input)}&count=1&language=ja`);
+                const geoData = await geoRes.json();
+                if (!geoData.results || geoData.results.length === 0) {
+                    resultEl.innerHTML = `<div style="text-align:center;padding:20px;color:var(--accent)">${t('weatherNotFound')}</div>`;
+                    return;
+                }
+                lat = geoData.results[0].latitude;
+                lng = geoData.results[0].longitude;
+                cityName = geoData.results[0].name || input;
+            }
+            const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current=temperature_2m,relative_humidity_2m,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Asia%2FTokyo&forecast_days=7`);
+            const data = await res.json();
+            const c = data.current;
+            const icon = WEATHER_ICONS[c.weathercode] || '🌤️';
+            const desc = WEATHER_DESC_JA[c.weathercode] || '';
+            resultEl.innerHTML = `
+                <div class="weather-current-card">
+                    <div class="weather-city-name">${escHtml(cityName)}</div>
+                    <div class="weather-icon-large">${icon}</div>
+                    <div class="weather-temp-large">${c.temperature_2m}°C</div>
+                    <div class="weather-desc">${desc}</div>
+                    <div class="weather-details">
+                        <span>💧 ${t('weatherHumidity')}: ${c.relative_humidity_2m}%</span>
+                        <span>💨 ${t('weatherWind')}: ${c.windspeed_10m} km/h</span>
+                    </div>
+                </div>
+            `;
+            const days = data.daily;
+            let forecastHtml = `<h4 style="margin:20px 0 12px;">${t('weatherForecastLabel')}</h4><div class="weather-forecast-grid">`;
+            for (let i = 0; i < days.time.length; i++) {
+                const d = new Date(days.time[i]);
+                const dayName = d.toLocaleDateString('ja-JP', { weekday: 'short', month: 'numeric', day: 'numeric' });
+                const fIcon = WEATHER_ICONS[days.weathercode[i]] || '🌤️';
+                forecastHtml += `
+                    <div class="weather-forecast-day">
+                        <div class="forecast-date">${dayName}</div>
+                        <div class="forecast-icon">${fIcon}</div>
+                        <div class="forecast-temps">
+                            <span class="temp-high">${days.temperature_2m_max[i]}°</span>
+                            <span class="temp-low">${days.temperature_2m_min[i]}°</span>
+                        </div>
+                    </div>
+                `;
+            }
+            forecastHtml += '</div>';
+            forecastEl.innerHTML = forecastHtml;
+        } catch (e) {
+            resultEl.innerHTML = `<div style="text-align:center;padding:20px;color:var(--accent)">${t('weatherError')}</div>`;
+        }
+    }
+
+    // ========== フォトギャラリー ==========
+    function handleGalleryUpload(e) {
+        const files = e.target.files;
+        if (!files.length || !currentTrip) return;
+        if (!currentTrip.photos) currentTrip.photos = [];
+        let loaded = 0;
+        Array.from(files).forEach(file => {
+            const reader = new FileReader();
+            reader.onload = (ev) => {
+                // 画像をリサイズして保存（localStorageのサイズ制限対策）
+                const img = new Image();
+                img.onload = () => {
+                    const canvas = document.createElement('canvas');
+                    const maxSize = 800;
+                    let w = img.width, h = img.height;
+                    if (w > maxSize || h > maxSize) {
+                        if (w > h) { h = h * maxSize / w; w = maxSize; }
+                        else { w = w * maxSize / h; h = maxSize; }
+                    }
+                    canvas.width = w; canvas.height = h;
+                    canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+                    const dataUrl = canvas.toDataURL('image/jpeg', 0.7);
+                    currentTrip.photos.push({
+                        id: Date.now() + '_' + Math.random().toString(36).slice(2, 6),
+                        data: dataUrl,
+                        date: new Date().toISOString().slice(0, 10),
+                        caption: file.name.replace(/\.[^/.]+$/, '')
+                    });
+                    loaded++;
+                    if (loaded === files.length) {
+                        saveData();
+                        renderPhotos();
+                    }
+                };
+                img.src = ev.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+        e.target.value = '';
+    }
+
+    function renderPhotos() {
+        const container = $('#photoGallery');
+        if (!currentTrip || !currentTrip.photos || currentTrip.photos.length === 0) {
+            container.innerHTML = `
+                <div class="empty-state" style="padding:40px 0;">
+                    <div class="empty-illustration">📸</div>
+                    <h2>${t('noPhotos')}</h2>
+                    <p>${t('noPhotosHint')}</p>
+                </div>`;
+            return;
+        }
+        container.innerHTML = currentTrip.photos.map(p => `
+            <div class="photo-card">
+                <img src="${p.data}" alt="${escHtml(p.caption)}" class="photo-card-img" loading="lazy" />
+                <div class="photo-card-overlay">
+                    <span class="photo-date">${p.date}</span>
+                    <button class="btn btn-danger btn-sm photo-delete-btn" onclick="TaviNote.deletePhoto('${p.id}')">${t('deletePhoto')}</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function deletePhoto(id) {
+        if (!currentTrip || !currentTrip.photos) return;
+        if (!confirm('この写真を削除しますか？')) return;
+        currentTrip.photos = currentTrip.photos.filter(p => p.id !== id);
+        saveData();
+        renderPhotos();
+    }
+
+    // ========== 旅の振り返り ==========
+    function renderReview() {
+        if (!currentTrip) return;
+        const review = currentTrip.review || {};
+        const rating = review.rating || 0;
+        document.querySelectorAll('#reviewStars .star').forEach((s, i) => {
+            s.textContent = i < rating ? '★' : '☆';
+            s.classList.toggle('active', i < rating);
+        });
+        document.getElementById('reviewStars').dataset.rating = rating;
+        $('#reviewBestMemory').value = review.bestMemory || '';
+        $('#reviewImprove').value = review.improve || '';
+        $('#reviewNote').value = review.note || '';
+    }
+
+    function saveReview() {
+        if (!currentTrip) return;
+        const rating = parseInt(document.getElementById('reviewStars').dataset.rating) || 0;
+        currentTrip.review = {
+            rating,
+            bestMemory: $('#reviewBestMemory').value,
+            improve: $('#reviewImprove').value,
+            note: $('#reviewNote').value,
+            savedAt: new Date().toISOString()
+        };
+        saveData();
+        showToast(t('reviewSaved'));
+    }
+
+    // showView の拡張：新しいタブに切り替えた時にレンダリング
+    const _origShowView = showView;
+    // サブタブ切り替え時のレンダリングを拡張
+    const origSubTabLogic = () => { };
+
     // ========== グローバル公開 ==========
     window.TaviNote = {
         toggleTodo, deleteTodo,
@@ -1757,7 +2007,8 @@
         togglePacking, deletePacking,
         deleteExpense,
         votePoll, deletePoll,
-        deleteReminder
+        deleteReminder,
+        deletePhoto
     };
 
     // 起動

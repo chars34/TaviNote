@@ -1,4 +1,4 @@
-# 🗺️ TaviNote — 旅行計画をもっと楽しく
+# 🗺️ TaviNote — Make Trip Planning More Fun
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
@@ -7,111 +7,113 @@
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
 </p>
 
-**TaviNote（タビノート）** は、旅行の「計画→準備→当日」すべてをこれひとつで管理できる旅行プランニングアプリです。  
-ブラウザだけで動作し、サーバー不要。すべてのデータはローカルに保存されます。
+**TaviNote** is a trip planning app that allows you to manage everything from "planning -> preparation -> the day of" all in one place.  
+It works entirely in the browser, requiring no server. All data is saved locally.
 
 ---
 
-## ✨ 主な機能
+## ✨ Key Features
 
-### 📋 旅行の計画
-| 機能 | 説明 |
+### 📋 Trip Planning
+| Feature | Description |
 |------|------|
-| 🗺️ **旅行作成** | 旅行名・日程・メンバー・予算を登録。カウントダウン表示付き |
-| 📖 **日記** | 旅行中の思い出を日記として記録 |
-| 📍 **場所リスト** | 行きたい場所を地図付きで管理。カテゴリ検索やお気に入り機能あり |
-| ✅ **TODOリスト** | やることをリスト化。テンプレート（国内・海外）で一括追加 |
-| 🕐 **スケジュール** | 日ごとの予定をタイムライン表示 |
-| 🗳️ **投票** | 「ランチどこ行く？」をみんなで投票。棒グラフで結果がひと目で分かる |
+| 🗺️ **Create Trips** | Register trip name, dates, members, and budget. Includes a countdown display. |
+| 📖 **Diary** | Record memories during the trip as a diary. |
+| 📍 **Places List** | Manage places you want to visit with a map. Includes category search and favorites. |
+| ✅ **TODO List** | List things to do. Add items in bulk using templates (Domestic, International). |
+| 🕐 **Schedule** | Display daily plans in a timeline. |
+| 🗳️ **Polls** | "Where should we go for lunch?" Vote together. Results are easily visible with a bar chart. |
 
-### 🧳 旅行の準備
-| 機能 | 説明 |
+### 🧳 Trip Preparation
+| Feature | Description |
 |------|------|
-| 👜 **持ち物チェックリスト** | テンプレート4種（国内・海外・日帰り・キャンプ）で持ち物を自動追加 |
-| 🎫 **チケット・予約管理** | 新幹線・飛行機・ホテルの予約番号やQR画像を一元管理 |
-| ⏰ **リマインダー** | 「出発3日前にパッキング」など、忘れもの防止通知 |
-| 📄 **旅のしおり** | ボタンひとつで旅行情報をまとめた印刷用しおりを生成 |
+| 👜 **Packing Checklist** | Automatically add items using 4 templates (Domestic, International, Day Trip, Camping). |
+| 🎫 **Tickets & Reservations** | Centrally manage reservation numbers and QR images for bullet trains, flights, and hotels. |
+| ⏰ **Reminders** | Prevent forgotten items with notifications like "Pack 3 days before departure". |
+| 📄 **Itinerary** | Generate a printable itinerary summarizing trip information with a single button. |
 
-### 🚶 旅行中に便利
-| 機能 | 説明 |
+### 🚶 Useful During the Trip
+| Feature | Description |
 |------|------|
-| 📍 **周辺検索** | GPSで現在地を取得し、近くのコンビニ・駅・食事処などを地図に表示 |
-| 💱 **外貨計算機** | 9通貨対応。最新レートの自動取得ボタン付き |
-| 💰 **お金管理** | 支出を記録→予算と比較→割り勘を自動計算 |
+| 📍 **Nearby Search** | Get your current location via GPS and display nearby convenience stores, stations, restaurants, etc. on a map. |
+| ☁️ **Weather Forecast** | Search for standard weather forecast of the destinations and show conditions for up to 7 days. |
+| 💰 **Money Management** | Record expenses -> Compare with budget -> Automatically calculate bill splitting. |
+| 📸 **Photo Gallery** | Upload and manage photos from your trip to look back on your memories. |
+| 📊 **Trip Review** | Rate your trip out of 5 stars and add memories and notes for future trips. |
 
-### 🛠️ その他
-| 機能 | 説明 |
+### 🛠️ Others
+| Feature | Description |
 |------|------|
-| 📌 **メモボード** | コルクボード風の画鋲メモ。6色から選べるカラフルな付箋 |
-| 🚄 **交通・宿検索リンク** | えきねっと、スマートEX、じゃらん等12カテゴリのリンク集 |
-| 🌙 **ダークモード** | 目に優しい暗めの配色に切り替え可能 |
+| 📌 **Memo Board** | Corkboard-style pin memos. Colorful sticky notes available in 6 colors. |
+| 🚄 **Transit & Accommodation Links** | A collection of links to 12 categories. |
+| 🌙 **Dark Mode** | Switch to a darker color scheme that is gentle on the eyes. |
 
 ---
 
-## 🚀 使い方
+## 🚀 How to Use
 
-### すぐに使う
+### Start Using Instantly
 
-1. このリポジトリをダウンロードまたはクローン
+1. Download or clone this repository
    ```bash
-   git clone https://github.com/あなたのユーザー名/TaviNote.git
+   git clone https://github.com/your-username/TaviNote.git
    ```
-2. `index.html` をブラウザで開く
-3. 旅行を作成して計画スタート！
+2. Open `index.html` in your browser.
+3. Create a trip and start planning!
 
-> **💡 ヒント:** サーバーは不要です。ダウンロードしてブラウザで開くだけ！
+> **💡 Hint:** No server is required. Just download and open in your browser!
 
-### 必要なもの
+### Requirements
 
-- モダンブラウザ（Chrome、Firefox、Safari、Edge）
-- インターネット接続（地図表示・為替レート取得・周辺検索に使用）
+- Modern browser (Chrome, Firefox, Safari, Edge)
+- Internet connection (Used for map display, weather forecasts, and nearby searches)
 
 ---
 
-## 📁 ファイル構成
+## 📁 File Structure
 
 ```
 TaviNote/
-├── index.html       # メインのHTMLファイル
-├── style.css        # すべてのスタイル定義
-├── app.js           # アプリケーションのロジック
-├── README.md        # このファイル
-├── CONTRIBUTING.md  # 貢献ガイド
-├── LEARN.md         # 学習ガイド
-└── LICENSE          # MITライセンス
+├── index.html       # Main HTML file
+├── style.css        # All style definitions
+├── app.js           # Application logic
+├── README.md        # This file
+├── CONTRIBUTING.md  # Contribution guide
+├── LEARN.md         # Learning guide
+└── LICENSE          # MIT License
 ```
 
 ---
 
-## 🔧 使用技術
+## 🔧 Technologies Used
 
-| 技術 | 用途 |
+| Technology | Purpose |
 |------|------|
-| **HTML5 / CSS3 / JavaScript** | コアの構造・デザイン・ロジック |
-| **Leaflet.js** | 地図の表示（場所リスト・周辺検索） |
-| **OpenStreetMap** | 地図タイル・住所検索（Nominatim API） |
-| **Overpass API** | 周辺のコンビニ・駅等の検索 |
-| **ExchangeRate API** | 為替レートの自動取得 |
-| **localStorage** | データの保存（ブラウザ内に保持） |
+| **HTML5 / CSS3 / JavaScript** | Core structure, design, and logic |
+| **Leaflet.js** | Map display (Places list, Nearby search) |
+| **OpenStreetMap** | Map tiles, Address search (Nominatim API) |
+| **Overpass API** | Searching nearby convenience stores, stations, etc. |
+| **Open-Meteo API** | Weather forecasting |
+| **localStorage** | Data saving (Kept within the browser) |
 
 ---
 
-## 📸 スクリーンショット
+## 📸 Screenshots
 
-> ブラウザで `index.html` を開くと、すぐに使い始められます！
-
----
-
-## 📝 ライセンス
-
-このプロジェクトは [MIT License](./LICENSE) のもとで公開されています。
+> Open `index.html` in your browser, and you can start using it immediately!
 
 ---
 
-## 🤝 コントリビュート
+## 📝 License
 
-バグ報告や機能提案は大歓迎です！  
-詳しくは [CONTRIBUTING.md](./CONTRIBUTING.md) をご覧ください。
+This project is released under the [MIT License](./LICENSE).
+
+---
+
+## 🤝 Contributing
+
+Bug reports and feature proposals are very welcome!  
+For details, please see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ---
 

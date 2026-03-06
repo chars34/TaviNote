@@ -1,116 +1,117 @@
-# 📚 TaviNote で学ぼう（LEARN.md）
+# 📚 Learn with TaviNote (LEARN.md)
 
-TaviNote は、HTML・CSS・JavaScript だけで作られたアプリです。  
-このファイルでは、アプリの仕組みをやさしく解説します。コードを読む入り口としてお使いください！
-
----
-
-## 🏗️ アプリの全体像
-
-```
-ブラウザ
-├── index.html  → 画面の「骨格」（ボタン、入力欄、メニューなど）
-├── style.css   → 画面の「見た目」（色、大きさ、アニメーションなど）
-└── app.js      → 画面の「動き」（ボタンを押したら何が起きるか）
-```
-
-> 💡 **たとえるなら:** HTMLは家の「設計図」、CSSは「内装」、JavaScriptは「電気配線」です。
+TaviNote is an app created using only HTML, CSS, and JavaScript.  
+This file explains the mechanics of the app in an easy-to-understand way. Please use it as an entry point for reading the code!
 
 ---
 
-## 📦 データの保存方法
-
-TaviNote は **localStorage** という仕組みを使います。  
-これはブラウザ内にデータを保存できる機能で、サーバーは不要です。
+## 🏗️ App Overview
 
 ```
-保存のしくみ:
-1. ユーザーがメモを書く
-2. app.js がデータを JSON という形式に変換
-3. localStorage に保存（ブラウザを閉じても消えない）
-4. 次にアプリを開くと localStorage からデータを読み込む
+Browser
+├── index.html  -> The "skeleton" of the screen (buttons, input fields, menus, etc.)
+├── style.css   -> The "appearance" of the screen (colors, sizes, animations, etc.)
+└── app.js      -> The "behavior" of the screen (what happens when a button is pressed)
 ```
 
-> ⚠️ **注意:** ブラウザのデータを消去すると、TaviNote のデータも消えます。
+> 💡 **As an analogy:** HTML is the "blueprint" of a house, CSS is the "interior design", and JavaScript is the "electrical wiring".
 
 ---
 
-## 🧩 機能ごとの仕組み
+## 📦 How Data is Saved
 
-### 📍 周辺検索（GPS）
-1. ブラウザの **Geolocation API** で現在地（緯度・経度）を取得
-2. **Overpass API**（OpenStreetMapのデータベース）に「この座標の周り1kmのコンビニを探して」とリクエスト
-3. 見つかった場所を **Leaflet.js** で地図上にマーカー表示
+TaviNote uses a mechanism called **localStorage**.  
+This is a feature that allows data to be saved within the browser, meaning no server is required.
 
-### 💱 外貨計算機
-1. ユーザーが通貨と金額を入力
-2. 「自動取得」ボタンを押すと **ExchangeRate API** から最新レートを取得
-3. `金額 × レート = 変換結果` を計算して表示
+```
+How saving works:
+1. The user writes a memo.
+2. app.js converts the data into a format called JSON.
+3. Saves it to localStorage (it doesn't disappear even if you close the browser).
+4. The next time you open the app, it loads the data from localStorage.
+```
 
-### 👜 持ち物チェックリスト
-1. テンプレートを選ぶと、あらかじめ用意されたアイテムリストが追加される
-2. チェックを入れると `checked: true` に変更され、取り消し線が表示
-3. 進捗バーは `チェック済み ÷ 全体数 × 100` で計算
-
-### 💰 割り勘計算
-1. メンバー名をカンマ区切りで入力済み（旅行作成時）
-2. 支出を記録するとき「誰が払ったか」を入力
-3. アプリが自動計算:
-   - `合計 ÷ メンバー数 = 1人あたり`
-   - `実際に払った額 − 1人あたり = 差額`
-   - プラスなら「受け取る人」、マイナスなら「払う人」
-
-### 🗳️ 投票
-1. 質問と選択肢を入力して投票を作成
-2. 選択肢をタップすると `votes` が +1 される
-3. 棒グラフの幅は `投票数 ÷ 合計投票数 × 100%` で計算
-
-### 📄 旅のしおり
-1. ボタンを押すと、旅行データから HTML を自動生成
-2. 新しいウィンドウで開く → ブラウザの印刷機能で PDF や紙に出力
+> ⚠️ **Warning:** If you clear your browser's data, your TaviNote data will also be deleted.
 
 ---
 
-## 🎨 デザインの仕組み
+## 🧩 Mechanisms by Feature
 
-### CSS カスタムプロパティ
-色やサイズは「変数」として管理されています：
+### 📍 Nearby Search (GPS)
+1. Acquires current location (latitude and longitude) using the browser's **Geolocation API**.
+2. Requests the **Overpass API** (OpenStreetMap database) to "find convenience stores within 1km around these coordinates".
+3. Displays the found locations with markers on a map using **Leaflet.js**.
+
+### ☁️ Weather Forecast
+1. The user inputs a city name.
+2. The city name is converted to coordinates using the Open-Meteo Geocoding API.
+3. Current weather and a 7-day forecast are fetched from the **Open-Meteo API**.
+4. Results are displayed on the weather page.
+
+### 👜 Packing Checklist
+1. When a template is selected, a pre-prepared list of items is added.
+2. When checked, it changes to `checked: true`, and a strikethrough is displayed.
+3. The progress bar is calculated by `Checked items ÷ Total items × 100`.
+
+### 💰 Splitting Bills
+1. Member names have been inputted separated by commas (when creating the trip).
+2. When recording an expense, input "who paid".
+3. The app calculates automatically:
+   - `Total ÷ Number of members = Amount per person`
+   - `Amount actually paid - Amount per person = Difference`
+   - If positive, "Person to receive"; if negative, "Person to pay".
+
+### 🗳️ Polls
+1. Create a poll by entering a question and choices.
+2. Tapping a choice adds +1 to `votes`.
+3. The width of the bar chart is calculated by `Votes ÷ Total votes × 100%`.
+
+### 📄 Itinerary
+1. When the button is pressed, HTML is automatically generated from the trip data.
+2. Opens in a new window -> Output to PDF or paper using the browser's print function.
+
+---
+
+## 🎨 Design Mechanics
+
+### CSS Custom Properties
+Colors and sizes are managed as "variables":
 ```css
---accent: #7CB69D;     /* メインの緑色 */
---bg-card: #ffffff;     /* カードの背景 */
---radius: 12px;         /* 角の丸み */
+--accent: #7CB69D;     /* Main green color */
+--bg-card: #ffffff;     /* Card background */
+--radius: 12px;         /* Corner roundness */
 ```
-> ダークモードでは、これらの変数の値を一括で変更するだけで全体の色が変わります。
+> In dark mode, simply changing the values of these variables changes the overall colors.
 
-### アニメーション
-メモボードの「ピン留めアニメーション」は CSS の `@keyframes` で実現：
+### Animations
+The "pinning animation" on the memo board is realized with CSS `@keyframes`:
 ```
-1. メモが上から降りてくる（translateY）
-2. 少し揺れる（rotate）  
-3. 定位置に落ち着く
+1. Memo drops from above (translateY)
+2. Shakes slightly (rotate)  
+3. Settles into its regular position
 ```
 
 ---
 
-## 🔰 初めてコードを読む方へ
+## 🔰 To Those Reading Code for the First Time
 
-1. **まず `index.html` を読む** — どんなボタンや画面があるか把握
-2. **`app.js` の `init()` 関数を読む** — ボタンが押されたときに何が呼ばれるか
-3. **興味のある機能の関数を読む** — 例: `renderPolls()` で投票の表示を理解
-4. **`style.css` で見た目を確認** — クラス名で検索すると対応するスタイルが見つかる
+1. **First, read `index.html`** — Understand what buttons and screens exist.
+2. **Read the `init()` function in `app.js`** — What gets called when buttons are pressed.
+3. **Read the functions of features you're interested in** — Ex: understand how polls are displayed with `renderPolls()`.
+4. **Check the appearance in `style.css`** — Searching by class name will find the corresponding styles.
 
 ---
 
-## 📖 もっと学びたい方へ
+## 📖 To Those Who Want to Learn More
 
-| トピック | おすすめリソース |
+| Topic | Recommended Resources |
 |---------|---------------|
-| HTML/CSS/JS 入門 | [MDN Web Docs](https://developer.mozilla.org/ja/) |
-| Leaflet.js（地図） | [Leaflet 公式チュートリアル](https://leafletjs.com/examples.html) |
-| localStorage | [MDN localStorage](https://developer.mozilla.org/ja/docs/Web/API/Window/localStorage) |
-| CSS アニメーション | [MDN CSS Animations](https://developer.mozilla.org/ja/docs/Web/CSS/CSS_animations) |
-| Geolocation API | [MDN Geolocation](https://developer.mozilla.org/ja/docs/Web/API/Geolocation_API) |
+| HTML/CSS/JS Basics | [MDN Web Docs](https://developer.mozilla.org/en-US/) |
+| Leaflet.js (Maps) | [Leaflet Official Tutorials](https://leafletjs.com/examples.html) |
+| localStorage | [MDN localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) |
+| CSS Animations | [MDN CSS Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations) |
+| Geolocation API | [MDN Geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) |
 
 ---
 
-楽しく学んでいきましょう！ 🎓✨
+Let's enjoy learning! 🎓✨

@@ -1,84 +1,84 @@
-# 🤝 TaviNote に貢献する
+# 🤝 Contributing to TaviNote
 
-TaviNote への貢献に興味を持っていただきありがとうございます！  
-バグ報告、機能提案、コードの改善など、どんな貢献も大歓迎です。
+Thank you for your interest in contributing to TaviNote!  
+We welcome all kinds of contributions, including bug reports, feature proposals, and code improvements.
 
 ---
 
-## 📋 貢献の方法
+## 📋 How to Contribute
 
-### 🐛 バグを見つけたら
+### 🐛 If You Find a Bug
 
-1. まず [Issues](../../issues) に同じバグが報告されていないか確認
-2. 新しい Issue を作成し、以下を記載：
-   - **何が起きたか** — 期待した動作と実際の動作
-   - **再現手順** — どうすればバグが起きるか
-   - **環境** — ブラウザの種類とバージョン
+1. First, check [Issues](../../issues) to see if the same bug has already been reported.
+2. Create a new Issue and include the following:
+   - **What happened** — Expected behavior vs. actual behavior
+   - **Steps to reproduce** — How to trigger the bug
+   - **Environment** — Browser type and version
 
-### 💡 新機能を提案したい
+### 💡 Proposing a New Feature
 
-1. [Issues](../../issues) で `enhancement` ラベルをつけて提案
-2. どんな場面で便利か、どう動くかを教えてください
+1. Propose it in [Issues](../../issues) with the `enhancement` label.
+2. Tell us in what situations it would be useful and how it should work.
 
-### 🔧 コードを修正・追加したい
+### 🔧 Modifying or Adding Code
 
-1. このリポジトリを **Fork** する
-2. 新しいブランチを作る
+1. **Fork** this repository.
+2. Create a new branch.
    ```bash
-   git checkout -b feature/あなたの機能名
+   git checkout -b feature/your-feature-name
    ```
-3. コードを修正する
-4. 変更をコミット
+3. Modify the code.
+4. Commit your changes.
    ```bash
    git add .
-   git commit -m "✨ 新機能: 〇〇を追加"
+   git commit -m "✨ feat: Add [something]"
    ```
-5. ブランチをプッシュ
+5. Push the branch.
    ```bash
-   git push origin feature/あなたの機能名
+   git push origin feature/your-feature-name
    ```
-6. **Pull Request** を作成
+6. Create a **Pull Request**.
 
 ---
 
-## 📐 コーディングルール
+## 📐 Coding Rules
 
-### ファイル構成
-- `index.html` — 画面の構造（HTML）
-- `style.css` — 見た目のデザイン（CSS）
-- `app.js` — 動作のロジック（JavaScript）
+### File Structure
+- `index.html` — Screen structure (HTML)
+- `style.css` — Visual design (CSS)
+- `app.js` — Behavior logic (JavaScript)
 
-### スタイルガイド
-- **コメントは日本語** で書いてください
-- CSS のカスタムプロパティ（`var(--accent)` など）を使い、色の直接指定は避ける
-- 新しい機能は **既存のデザインパターン** に合わせる
-- `localStorage` でデータを保存する形式を維持
+### Style Guide
+- Please write **comments in English** (if translating, or whatever language the project primarily uses for comments).
+- Use CSS custom properties (like `var(--accent)`) and avoid direct color specification.
+- Match new features to **existing design patterns**.
+- Maintain the format of data saved in `localStorage`.
 
-### コミットメッセージ
-絵文字プレフィックスを使います：
-- ✨ 新機能 → `✨ 新機能: 〇〇`
-- 🐛 バグ修正 → `🐛 修正: 〇〇`
-- 💄 デザイン変更 → `💄 UI: 〇〇`
-- 📝 ドキュメント → `📝 ドキュメント: 〇〇`
-- ♻️ リファクタリング → `♻️ リファクタ: 〇〇`
-
----
-
-## 🧪 テスト方法
-
-TaviNote はブラウザだけで動くアプリなので：
-
-1. `index.html` をブラウザで開く
-2. 変更した機能を手動で動作確認
-3. 他の既存機能が壊れていないことも確認
+### Commit Messages
+We use emoji prefixes:
+- ✨ New Feature -> `✨ feat: ...`
+- 🐛 Bug Fix -> `🐛 fix: ...`
+- 💄 Design Change -> `💄 ui: ...`
+- 📝 Documentation -> `📝 docs: ...`
+- ♻️ Refactoring -> `♻️ refactor: ...`
 
 ---
 
-## 💬 質問がある場合
+## 🧪 How to Test
 
-Issue を作成するか、Pull Request にコメントしてください。  
-初心者の方も大歓迎です！分からないことがあればお気軽にどうぞ 😊
+Since TaviNote is an app that runs only in the browser:
+
+1. Open `index.html` in your browser.
+2. Manually verify the operation of the modified feature.
+3. Check and ensure that other existing features are not broken.
 
 ---
 
-ありがとうございます！ 🌟
+## 💬 If You Have Questions
+
+Please create an Issue or leave a comment on a Pull Request.  
+Beginners are also very welcome! If you have any questions, please feel free to ask 😊
+
+---
+
+Thank you! 🌟
