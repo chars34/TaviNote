@@ -457,7 +457,7 @@
                 <div class="card search-card">
                     <h3>🗒️ 検索メモ</h3>
                     <p>調べた内容をメモしておこう</p>
-                    <textarea id="searchMemo" class="search-memo"
+                    <textarea id="searchMemo" class="search-memo" data-i18n-placeholder="exSearchMemo"
                         placeholder="例：東京→大阪 のぞみ 13:00発 えきねっとで予約済み 15,000円"></textarea>
                     <button id="btnSaveSearchMemo" class="btn btn-secondary btn-sm"
                         style="margin-top:8px;">メモを保存</button>
@@ -507,7 +507,8 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label data-i18n="tripName">旅行の名前</label>
-                    <input type="text" id="inputTripName" placeholder="例：沖縄旅行 2026年夏" />
+                    <input type="text" id="inputTripName" data-i18n-placeholder="exTripName"
+                        placeholder="例：沖縄旅行 2026年夏" />
                 </div>
                 <div class="form-group">
                     <label data-i18n="departure">出発日</label>
@@ -519,11 +520,12 @@
                 </div>
                 <div class="form-group">
                     <label data-i18n="companions">一緒に行く人</label>
-                    <input type="text" id="inputTripMembers" placeholder="例：家族、彼女、友達" />
+                    <input type="text" id="inputTripMembers" data-i18n-placeholder="exCompanions"
+                        placeholder="例：家族、彼女、友達" />
                 </div>
                 <div class="form-group">
                     <label data-i18n="budgetMemo">予算メモ</label>
-                    <input type="text" id="inputTripBudget" placeholder="例：10万円くらい" />
+                    <input type="text" id="inputTripBudget" data-i18n-placeholder="exBudget" placeholder="例：10万円くらい" />
                 </div>
                 <div class="form-group">
                     <label data-i18n="prefectureLabel">行き先（都道府県）</label>
@@ -605,7 +607,8 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label data-i18n="roomIdLabel">ルームID</label>
-                    <input type="text" id="inputRoomId" placeholder="例: m0x3jk2a4z9b" />
+                    <input type="text" id="inputRoomId" data-i18n-placeholder="exRoomId"
+                        placeholder="例: m0x3jk2a4z9b" />
                 </div>
             </div>
             <div class="modal-footer">
@@ -659,11 +662,13 @@
                 </div>
                 <div class="form-group">
                     <label data-i18n="title">タイトル</label>
-                    <input type="text" id="inputDiaryTitle" placeholder="例：初日の観光！" />
+                    <input type="text" id="inputDiaryTitle" data-i18n-placeholder="exDiaryTitle"
+                        placeholder="例：初日の観光！" />
                 </div>
                 <div class="form-group">
                     <label data-i18n="diaryContent">日記の内容</label>
-                    <textarea id="inputDiaryContent" rows="8" placeholder="今日の出来事を書いてみよう..."></textarea>
+                    <textarea id="inputDiaryContent" rows="8" data-i18n-placeholder="exDiaryContent"
+                        placeholder="今日の出来事を書いてみよう..."></textarea>
                 </div>
                 <div class="form-group">
                     <label data-i18n="addPhoto">写真を追加</label>
@@ -688,7 +693,7 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label data-i18n="placeName">場所の名前</label>
-                    <input type="text" id="inputPlaceName" placeholder="例：美ら海水族館" />
+                    <input type="text" id="inputPlaceName" data-i18n-placeholder="exPlaceName" placeholder="例：美ら海水族館" />
                 </div>
                 <div class="form-group">
                     <label data-i18n="category">カテゴリ</label>
@@ -702,20 +707,24 @@
                 </div>
                 <div class="form-group">
                     <label data-i18n="memo">メモ</label>
-                    <textarea id="inputPlaceMemo" rows="3" placeholder="例：入場料1,800円、10時オープン"></textarea>
+                    <textarea id="inputPlaceMemo" rows="3" data-i18n-placeholder="exPlaceMemo"
+                        placeholder="例：入場料1,800円、10時オープン"></textarea>
                 </div>
                 <div class="form-group">
                     <label data-i18n="searchByAddress">住所で検索（地図にピン表示）</label>
                     <div class="search-input-row">
-                        <input type="text" id="inputPlaceAddress" placeholder="例：沖縄県国頭郡本部町" />
+                        <input type="text" id="inputPlaceAddress" data-i18n-placeholder="exAddress"
+                            placeholder="例：沖縄県国頭郡本部町" />
                         <button id="btnSearchAddress" class="btn btn-secondary btn-sm">検索</button>
                     </div>
                 </div>
                 <div class="form-group">
                     <label data-i18n="latLng">緯度 / 経度（地図検索で自動入力）</label>
                     <div class="latlng-row">
-                        <input type="number" id="inputPlaceLat" placeholder="緯度" step="any" />
-                        <input type="number" id="inputPlaceLng" placeholder="経度" step="any" />
+                        <input type="number" id="inputPlaceLat" data-i18n-placeholder="latPlaceholder" placeholder="緯度"
+                            step="any" />
+                        <input type="number" id="inputPlaceLng" data-i18n-placeholder="lngPlaceholder" placeholder="経度"
+                            step="any" />
                     </div>
                 </div>
             </div>
@@ -736,7 +745,7 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label data-i18n="todoContent">やること</label>
-                    <input type="text" id="inputTodoText" placeholder="例：ホテルを予約する" />
+                    <input type="text" id="inputTodoText" data-i18n-placeholder="exTodo" placeholder="例：ホテルを予約する" />
                 </div>
                 <div class="form-group">
                     <label data-i18n="deadline">期限日</label>
@@ -768,7 +777,8 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label data-i18n="scheduleContent">予定の内容</label>
-                    <input type="text" id="inputScheduleText" placeholder="例：美ら海水族館を見学" />
+                    <input type="text" id="inputScheduleText" data-i18n-placeholder="exScheduleContent"
+                        placeholder="例：美ら海水族館を見学" />
                 </div>
                 <div class="form-row">
                     <div class="form-group">
@@ -782,7 +792,8 @@
                 </div>
                 <div class="form-group">
                     <label data-i18n="memo">メモ</label>
-                    <textarea id="inputScheduleMemo" rows="2" placeholder="例：入場券はネットで事前購入"></textarea>
+                    <textarea id="inputScheduleMemo" rows="2" data-i18n-placeholder="exScheduleMemo"
+                        placeholder="例：入場券はネットで事前購入"></textarea>
                 </div>
             </div>
             <div class="modal-footer">
@@ -838,7 +849,8 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label data-i18n="memoContent">メモの内容</label>
-                    <textarea id="inputMemoText" rows="4" placeholder="例：お土産はちんすこうを買う！"></textarea>
+                    <textarea id="inputMemoText" rows="4" data-i18n-placeholder="exMemoContent"
+                        placeholder="例：お土産はちんすこうを買う！"></textarea>
                 </div>
                 <div class="form-group">
                     <label data-i18n="memoColor">メモの色</label>
@@ -886,11 +898,13 @@
                 </div>
                 <div class="form-group">
                     <label data-i18n="ticketTitle">タイトル</label>
-                    <input type="text" id="inputTicketTitle" placeholder="例：東京→大阪 のぞみ" />
+                    <input type="text" id="inputTicketTitle" data-i18n-placeholder="exTicketTitle"
+                        placeholder="例：東京→大阪 のぞみ" />
                 </div>
                 <div class="form-group">
                     <label data-i18n="reservationCode">予約番号・確認番号</label>
-                    <input type="text" id="inputTicketCode" placeholder="例：ABC-12345" />
+                    <input type="text" id="inputTicketCode" data-i18n-placeholder="exReservationCode"
+                        placeholder="例：ABC-12345" />
                 </div>
                 <div class="form-group">
                     <label data-i18n="date">日付</label>
@@ -898,7 +912,8 @@
                 </div>
                 <div class="form-group">
                     <label data-i18n="ticketMemo">メモ</label>
-                    <textarea id="inputTicketMemo" rows="2" placeholder="座席番号、注意事項など"></textarea>
+                    <textarea id="inputTicketMemo" rows="2" data-i18n-placeholder="exTicketMemo"
+                        placeholder="座席番号、注意事項など"></textarea>
                 </div>
                 <div class="form-group">
                     <label data-i18n="qrImage">QR画像（任意）</label>
@@ -923,7 +938,8 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label data-i18n="itemName">アイテム名</label>
-                    <input type="text" id="inputPackingItem" placeholder="例：パスポート" />
+                    <input type="text" id="inputPackingItem" data-i18n-placeholder="exPackingItem"
+                        placeholder="例：パスポート" />
                 </div>
                 <div class="form-group">
                     <label data-i18n="category">カテゴリ</label>
@@ -954,7 +970,8 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label data-i18n="whatSpent">何に使った？</label>
-                    <input type="text" id="inputExpenseTitle" placeholder="例：ランチ代" />
+                    <input type="text" id="inputExpenseTitle" data-i18n-placeholder="exExpenseTitle"
+                        placeholder="例：ランチ代" />
                 </div>
                 <div class="form-group">
                     <label data-i18n="amountYen">金額（円）</label>
@@ -973,7 +990,8 @@
                 </div>
                 <div class="form-group">
                     <label data-i18n="whoPaid">誰が払った？</label>
-                    <input type="text" id="inputExpensePayer" placeholder="例：たろう" />
+                    <input type="text" id="inputExpensePayer" data-i18n-placeholder="exExpensePayer"
+                        placeholder="例：たろう" />
                 </div>
                 <div class="form-group">
                     <label data-i18n="date">日付</label>
@@ -997,11 +1015,13 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label data-i18n="question">質問</label>
-                    <input type="text" id="inputPollQuestion" placeholder="例：ランチはどこにする？" />
+                    <input type="text" id="inputPollQuestion" data-i18n-placeholder="exPollQuestion"
+                        placeholder="例：ランチはどこにする？" />
                 </div>
                 <div class="form-group">
                     <label data-i18n="options">選択肢（改行で区切る）</label>
-                    <textarea id="inputPollOptions" rows="4" placeholder="寿司屋\nイタリアン\nラーメン"></textarea>
+                    <textarea id="inputPollOptions" rows="4" data-i18n-placeholder="exPollOptions"
+                        placeholder="寿司屋\nイタリアン\nラーメン"></textarea>
                 </div>
             </div>
             <div class="modal-footer">
@@ -1021,7 +1041,8 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label data-i18n="content">内容</label>
-                    <input type="text" id="inputReminderText" placeholder="例：充電器を確認する" />
+                    <input type="text" id="inputReminderText" data-i18n-placeholder="exReminderContent"
+                        placeholder="例：充電器を確認する" />
                 </div>
                 <div class="form-group">
                     <label data-i18n="date">日付</label>
