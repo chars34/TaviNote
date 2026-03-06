@@ -8,6 +8,300 @@
     // ========== データ管理 ==========
     const STORAGE_KEY = 'tavinote_data';
 
+    // ========== 多言語対応（i18n） ==========
+    const TRANSLATIONS = {
+        ja: {
+            // サイドバー
+            home: 'ホーム', memoBoard: 'メモボード', transportSearch: '交通・宿検索',
+            currencyCalc: '外貨計算機', nearbySearch: '周辺検索',
+            // ダッシュボード
+            myTripPlans: '🌿 マイ旅行プラン', newTrip: '新しい旅行',
+            noTripsYet: 'まだ旅行プランがありません',
+            noTripsHint: '「新しい旅行」ボタンから、最初の旅行を計画しましょう！',
+            // 旅行詳細
+            back: '← 戻る', edit: '✏️ 編集', delete: '🗑️ 削除',
+            overview: '🌳 概要', diary: '📖 日記', places: '📍 場所',
+            todo: '✅ TODO', schedule: '🕐 スケジュール', tickets: '🎫 チケット',
+            packing: '👜 持ち物', money: '💰 お金', vote: '🗳️ 投票',
+            // 概要タブ
+            prepProgress: '🌳 準備の進み具合', tripInfo: '📋 旅行の情報',
+            createShiori: '📄 しおりを作る', reminder: '⏰ リマインダー',
+            addReminder: '＋ リマインダー追加',
+            // 日記
+            travelDiary: '📖 旅行日記', writeDiary: '＋ 日記を書く',
+            // 場所
+            wantToGo: '📍 行きたい場所', addPlace: '＋ 場所を追加',
+            all: 'すべて', food: '🍽️ 食事', sightseeing: '🏛️ 観光',
+            hotel: '🏨 宿泊', shopping: '🛍️ 買い物', other: '📌 その他',
+            // TODO
+            todoList: '✅ やることリスト', add: '＋ 追加',
+            // スケジュール
+            dailySchedule: '🕐 1日のスケジュール', addSchedule: '＋ 予定追加',
+            // チケット
+            ticketManage: '🎫 チケット・予約管理', addTicket: '＋ チケット追加',
+            // 持ち物
+            packingList: '👜 持ち物チェックリスト', applyTemplate: 'テンプレ適用',
+            selectTemplate: 'テンプレートを選ぶ',
+            domestic: '🏯 国内旅行', overseas: '✈️ 海外旅行',
+            daytrip: '🚶 日帰り', camp: '⛺ キャンプ',
+            // お金
+            budgetSim: '📊 予算シミュレーション', expenseRecord: '💰 支出の記録',
+            addExpense: '＋ 支出追加',
+            // 投票
+            voteTitle: '🗳️ みんなで投票', createVote: '＋ 投票を作る',
+            // メモボード
+            memoBoardTitle: '📌 メモボード', addMemo: '＋ メモを追加',
+            memoBoardEmpty: '📌 ボードにメモを貼ってみよう！',
+            // 交通検索
+            transportTitle: '🚄 交通・宿・おでかけ検索',
+            // 外貨
+            currencyTitle: '💱 外貨計算機',
+            // 周辺
+            nearbyTitle: '📍 周辺検索',
+            // モーダル
+            planTrip: '🗺️ 新しい旅行を計画', tripName: '旅行の名前',
+            departure: '出発日', returnDate: '帰宅日', companions: '一緒に行く人',
+            budgetMemo: '予算メモ', template: 'テンプレート', dontUse: '使わない',
+            domesticTrip: '国内旅行', overseasTrip: '海外旅行', daytripTrip: '日帰り',
+            cancel: 'キャンセル', createTrip: '旅行を作成',
+            // スケジュールモーダル
+            addScheduleTitle: '🕐 予定を追加', editScheduleTitle: '🕐 予定を編集',
+            scheduleContent: '予定の内容', startTime: '開始時間', endTime: '終了時間',
+            memo: 'メモ', save: '追加', update: '更新',
+            // 旅行編集モーダル
+            editTripInfo: '✏️ 旅行情報を編集', updateBtn: '更新',
+            // 日記モーダル
+            writeDiaryTitle: '📖 日記を書く', date: '日付', title: 'タイトル',
+            diaryContent: '日記の内容', addPhoto: '写真を追加', saveBtn: '保存',
+            // 場所モーダル
+            addPlaceTitle: '📍 行きたい場所を追加', placeName: '場所の名前',
+            category: 'カテゴリ', searchByAddress: '住所で検索（地図にピン表示）',
+            latLng: '緯度 / 経度（地図検索で自動入力）', addBtn: '追加',
+            // TODOモーダル
+            addTodoTitle: '✅ やることを追加', todoContent: 'やること',
+            deadline: '期限日', priority: '優先度',
+            low: '🟢 低い', normal: '🟡 ふつう', high: '🔴 高い',
+            // メモモーダル
+            addMemoTitle: '📌 メモを追加', memoContent: 'メモの内容',
+            memoColor: 'メモの色', pinMemo: '貼り付ける 📌',
+            // チケットモーダル
+            addTicketTitle: '🎫 チケットを追加', ticketType: '種類',
+            trainTicket: '🚄 新幹線・電車', flightTicket: '✈️ 飛行機',
+            hotelTicket: '🏨 ホテル', eventTicket: '🎫 イベント',
+            otherTicket: '📋 その他', ticketTitle: 'タイトル',
+            reservationCode: '予約番号・確認番号', ticketMemo: 'メモ',
+            qrImage: 'QR画像（任意）',
+            // 持ち物モーダル
+            addPackingTitle: '👜 持ち物を追加', itemName: 'アイテム名',
+            valuables: '💳 貴重品', clothes: '👕 衣類', toiletries: '🪥 洗面用具',
+            electronics: '📱 電子機器', medicine: '💊 薬・救急', otherCat: '📦 その他',
+            // 支出モーダル
+            recordExpense: '💰 支出を記録', whatSpent: '何に使った？',
+            amountYen: '金額（円）', expenseCategory: 'カテゴリ',
+            transport: '🚄 交通費', dining: '🍽️ 食事', accommodation: '🏨 宿泊',
+            shoppingExp: '🛍️ 買い物', admissionFee: '🎫 入場料',
+            otherExp: '📦 その他', whoPaid: '誰が払った？', recordBtn: '記録する',
+            // 投票モーダル
+            createVoteTitle: '🗳️ 投票を作る', question: '質問',
+            options: '選択肢（改行で区切る）', createBtn: '作成',
+            // リマインダーモーダル
+            reminderTitle: '⏰ リマインダー', content: '内容',
+            // トースト
+            toastScheduleAdded: '🕐 予定を追加しました！',
+            toastScheduleUpdated: '🕐 予定を更新しました！',
+            toastEnterContent: '予定の内容を入力してください',
+            // ツリーメッセージ
+            treeMsg0: 'タスクを追加して旅行準備を始めよう！',
+            treeMsg25: '芽が出てきた！この調子！',
+            treeMsg50: '順調に育ってます！半分クリア！',
+            treeMsg75: '花が咲きました！もう少し！',
+            treeMsg100: '🎉 準備完了！いってらっしゃい！',
+            // 概要ラベル
+            dateLabel: '日程', membersLabel: 'メンバー', budgetLabel: '予算',
+            todoProgressLabel: 'TODO進捗', placesLabel: '行きたい場所',
+            diaryLabel: '日記', completed: '完了', items: '件',
+            notSet: '未設定',
+            // 交通検索カード
+            shinkansenTitle: '🎫 新幹線・特急の予約', shinkansenDesc: 'きっぷのネット予約はこちら',
+            transferTitle: '🚃 乗り換え・路線検索', transferDesc: '電車の時刻や乗り換えを調べる',
+            busTitle: '🚌 高速バス', busDesc: '安く移動するなら高速バス',
+            flightTitle: '✈️ 飛行機', flightDesc: '航空券を探す',
+            rentalCarTitle: '🚗 レンタカー', rentalCarDesc: '車を借りて自由にドライブ',
+            hotelTitle: '🏨 旅館・ホテル', hotelDesc: '宿泊先を探す',
+            gourmetTitle: '🍽️ グルメ・レストラン', gourmetDesc: '現地のおいしいお店を探す',
+            spotTitle: '🏛️ 観光スポット・体験', spotDesc: '遊び場や観光地を探す',
+            mapTitle: '🗺️ 地図・ルート', mapDesc: 'ルートや周辺を確認する',
+            weatherTitle: '☀️ 天気予報', weatherDesc: '旅行先のお天気をチェック',
+            prepTitle: '🛡️ 旅の準備', prepDesc: '保険やWi-Fiレンタルなど',
+            searchMemoTitle: '🗒️ 検索メモ', searchMemoDesc: '調べた内容をメモしておこう',
+            saveMemo: 'メモを保存',
+            // 外貨
+            amount: '金額', fromCurrency: '元の通貨', toCurrency: '変換先の通貨',
+            rate: 'レート（1元の通貨 = ? 先の通貨）', calculate: '計算する',
+            fetchRate: '🌐 最新レートを自動取得',
+            // 周辺
+            getLocation: '📍 現在地を取得', locationHint: '位置情報を取得してください',
+            convenience: '🏪 コンビニ', station: '🚉 駅', restaurant: '🍽️ 食事',
+            cafe: '☕ カフェ', hospital: '🏥 病院', atm: '🏧 ATM', toilet: '🚻 トイレ',
+            // スケジュール空
+            scheduleEmpty: '🕐 この日の予定はまだありません。<br>「予定追加」から追加しましょう！',
+            // ダークモード
+            darkModeTitle: 'ダークモード切替',
+            // 言語
+            langToggle: '🇬🇧 EN',
+            daysUntilTrip: '日後',
+            daysAgo: '日前',
+            today: '今日！',
+        },
+        en: {
+            home: 'Home', memoBoard: 'Memo Board', transportSearch: 'Transport & Hotels',
+            currencyCalc: 'Currency', nearbySearch: 'Nearby',
+            myTripPlans: '🌿 My Trip Plans', newTrip: 'New Trip',
+            noTripsYet: 'No trip plans yet',
+            noTripsHint: 'Create your first trip with the "New Trip" button!',
+            back: '← Back', edit: '✏️ Edit', delete: '🗑️ Delete',
+            overview: '🌳 Overview', diary: '📖 Diary', places: '📍 Places',
+            todo: '✅ TODO', schedule: '🕐 Schedule', tickets: '🎫 Tickets',
+            packing: '👜 Packing', money: '💰 Money', vote: '🗳️ Vote',
+            prepProgress: '🌳 Preparation Progress', tripInfo: '📋 Trip Info',
+            createShiori: '📄 Create Itinerary', reminder: '⏰ Reminders',
+            addReminder: '＋ Add Reminder',
+            travelDiary: '📖 Travel Diary', writeDiary: '＋ Write Diary',
+            wantToGo: '📍 Places to Visit', addPlace: '＋ Add Place',
+            all: 'All', food: '🍽️ Food', sightseeing: '🏛️ Sightseeing',
+            hotel: '🏨 Hotel', shopping: '🛍️ Shopping', other: '📌 Other',
+            todoList: '✅ To-Do List', add: '＋ Add',
+            dailySchedule: '🕐 Daily Schedule', addSchedule: '＋ Add Plan',
+            ticketManage: '🎫 Tickets & Reservations', addTicket: '＋ Add Ticket',
+            packingList: '👜 Packing Checklist', applyTemplate: 'Apply',
+            selectTemplate: 'Choose Template',
+            domestic: '🏯 Domestic', overseas: '✈️ Overseas',
+            daytrip: '🚶 Day Trip', camp: '⛺ Camping',
+            budgetSim: '📊 Budget Simulation', expenseRecord: '💰 Expense Log',
+            addExpense: '＋ Add Expense',
+            voteTitle: '🗳️ Group Vote', createVote: '＋ Create Vote',
+            memoBoardTitle: '📌 Memo Board', addMemo: '＋ Add Memo',
+            memoBoardEmpty: '📌 Pin a memo to the board!',
+            transportTitle: '🚄 Transport & Hotel Search',
+            currencyTitle: '💱 Currency Converter',
+            nearbyTitle: '📍 Nearby Search',
+            planTrip: '🗺️ Plan a New Trip', tripName: 'Trip Name',
+            departure: 'Departure', returnDate: 'Return', companions: 'Companions',
+            budgetMemo: 'Budget Memo', template: 'Template', dontUse: 'None',
+            domesticTrip: 'Domestic', overseasTrip: 'Overseas', daytripTrip: 'Day Trip',
+            cancel: 'Cancel', createTrip: 'Create Trip',
+            addScheduleTitle: '🕐 Add Plan', editScheduleTitle: '🕐 Edit Plan',
+            scheduleContent: 'Plan Details', startTime: 'Start Time', endTime: 'End Time',
+            memo: 'Memo', save: 'Add', update: 'Update',
+            editTripInfo: '✏️ Edit Trip Info', updateBtn: 'Update',
+            writeDiaryTitle: '📖 Write Diary', date: 'Date', title: 'Title',
+            diaryContent: 'Diary Content', addPhoto: 'Add Photo', saveBtn: 'Save',
+            addPlaceTitle: '📍 Add Place to Visit', placeName: 'Place Name',
+            category: 'Category', searchByAddress: 'Search by Address',
+            latLng: 'Latitude / Longitude', addBtn: 'Add',
+            addTodoTitle: '✅ Add To-Do', todoContent: 'To-Do',
+            deadline: 'Deadline', priority: 'Priority',
+            low: '🟢 Low', normal: '🟡 Normal', high: '🔴 High',
+            addMemoTitle: '📌 Add Memo', memoContent: 'Memo Content',
+            memoColor: 'Memo Color', pinMemo: 'Pin it 📌',
+            addTicketTitle: '🎫 Add Ticket', ticketType: 'Type',
+            trainTicket: '🚄 Train', flightTicket: '✈️ Flight',
+            hotelTicket: '🏨 Hotel', eventTicket: '🎫 Event',
+            otherTicket: '📋 Other', ticketTitle: 'Title',
+            reservationCode: 'Reservation Code', ticketMemo: 'Memo',
+            qrImage: 'QR Image (Optional)',
+            addPackingTitle: '👜 Add Item', itemName: 'Item Name',
+            valuables: '💳 Valuables', clothes: '👕 Clothes', toiletries: '🪥 Toiletries',
+            electronics: '📱 Electronics', medicine: '💊 Medicine', otherCat: '📦 Other',
+            recordExpense: '💰 Record Expense', whatSpent: 'What did you spend on?',
+            amountYen: 'Amount (¥)', expenseCategory: 'Category',
+            transport: '🚄 Transport', dining: '🍽️ Dining', accommodation: '🏨 Accommodation',
+            shoppingExp: '🛍️ Shopping', admissionFee: '🎫 Admission',
+            otherExp: '📦 Other', whoPaid: 'Who paid?', recordBtn: 'Record',
+            createVoteTitle: '🗳️ Create Vote', question: 'Question',
+            options: 'Options (one per line)', createBtn: 'Create',
+            reminderTitle: '⏰ Reminder', content: 'Content',
+            toastScheduleAdded: '🕐 Schedule added!',
+            toastScheduleUpdated: '🕐 Schedule updated!',
+            toastEnterContent: 'Please enter plan details',
+            treeMsg0: 'Add tasks to start preparing!',
+            treeMsg25: 'Sprouts are growing! Keep going!',
+            treeMsg50: 'Growing well! Halfway there!',
+            treeMsg75: 'Flowers are blooming! Almost done!',
+            treeMsg100: '🎉 All set! Have a great trip!',
+            dateLabel: 'Dates', membersLabel: 'Members', budgetLabel: 'Budget',
+            todoProgressLabel: 'TODO Progress', placesLabel: 'Places to Visit',
+            diaryLabel: 'Diary', completed: 'completed', items: 'items',
+            notSet: 'Not set',
+            shinkansenTitle: '🎫 Train Reservations', shinkansenDesc: 'Book train tickets online',
+            transferTitle: '🚃 Route Search', transferDesc: 'Find train schedules & routes',
+            busTitle: '🚌 Highway Bus', busDesc: 'Travel on a budget by bus',
+            flightTitle: '✈️ Flights', flightDesc: 'Search for flights',
+            rentalCarTitle: '🚗 Rental Car', rentalCarDesc: 'Rent a car for your trip',
+            hotelTitle: '🏨 Hotels', hotelDesc: 'Find accommodations',
+            gourmetTitle: '🍽️ Restaurants', gourmetDesc: 'Find local eateries',
+            spotTitle: '🏛️ Attractions', spotDesc: 'Find sightseeing spots',
+            mapTitle: '🗺️ Maps & Routes', mapDesc: 'Check routes & surroundings',
+            weatherTitle: '☀️ Weather', weatherDesc: 'Check the weather forecast',
+            prepTitle: '🛡️ Travel Prep', prepDesc: 'Insurance, Wi-Fi rental, etc.',
+            searchMemoTitle: '🗒️ Search Memo', searchMemoDesc: 'Save your research notes',
+            saveMemo: 'Save Memo',
+            amount: 'Amount', fromCurrency: 'From', toCurrency: 'To',
+            rate: 'Rate (1 source = ? target)', calculate: 'Calculate',
+            fetchRate: '🌐 Fetch Latest Rate',
+            getLocation: '📍 Get Location', locationHint: 'Please get your location',
+            convenience: '🏪 Store', station: '🚉 Station', restaurant: '🍽️ Food',
+            cafe: '☕ Café', hospital: '🏥 Hospital', atm: '🏧 ATM', toilet: '🚻 Toilet',
+            scheduleEmpty: '🕐 No plans for this day yet.<br>Add one with "Add Plan"!',
+            darkModeTitle: 'Toggle Dark Mode',
+            langToggle: '🇯🇵 JP',
+            daysUntilTrip: 'days to go',
+            daysAgo: 'days ago',
+            today: 'Today!',
+        }
+    };
+
+    function t(key) {
+        const lang = appData.lang || 'ja';
+        return (TRANSLATIONS[lang] && TRANSLATIONS[lang][key]) || (TRANSLATIONS.ja[key]) || key;
+    }
+
+    function applyLanguage() {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            const val = t(key);
+            if (el.tagName === 'INPUT' && el.type !== 'text' && el.type !== 'number') return;
+            if (el.tagName === 'OPTION' || el.tagName === 'LABEL' || el.tagName === 'BUTTON' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'SPAN') {
+                el.textContent = val;
+            }
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            el.placeholder = t(el.getAttribute('data-i18n-placeholder'));
+        });
+        document.querySelectorAll('[data-i18n-title]').forEach(el => {
+            el.title = t(el.getAttribute('data-i18n-title'));
+        });
+        // Update language toggle button
+        const langBtn = document.getElementById('langToggle');
+        if (langBtn) {
+            const langIcon = langBtn.querySelector('.toggle-icon');
+            if (langIcon) langIcon.textContent = t('langToggle');
+        }
+    }
+
+    function toggleLanguage() {
+        appData.lang = (appData.lang || 'ja') === 'ja' ? 'en' : 'ja';
+        saveData();
+        applyLanguage();
+        // Re-render dynamic content
+        if (currentView === 'dashboard') renderDashboard();
+        if (currentView === 'trip-detail') {
+            renderTripDetail();
+            switchTab(currentTab);
+        }
+        if (currentView === 'memo-board') renderMemoBoard();
+    }
+
     function loadData() {
         try {
             const raw = localStorage.getItem(STORAGE_KEY);
@@ -143,7 +437,7 @@
             const todos = trip.todos || [];
             const done = todos.filter(t => t.done).length;
             const pct = todos.length > 0 ? Math.round(done / todos.length * 100) : 0;
-            const treeIcon = getTreeIcon(pct);
+            const treeImg = getTreeImage(pct);
             let countdown = '';
             if (days === null) countdown = '';
             else if (days > 0) countdown = `あと${days}日`;
@@ -151,7 +445,7 @@
             else countdown = `${Math.abs(days)}日前`;
             return `
         <div class="trip-card" data-trip-id="${trip.id}">
-          <span class="trip-card-tree">${treeIcon}</span>
+          <img src="${treeImg}" alt="Tree" class="trip-card-tree-img" />
           <div class="trip-card-title">${escHtml(trip.name)}</div>
           <div class="trip-card-date">📅 ${formatDate(trip.date)}${trip.endDate ? ' 〜 ' + formatDate(trip.endDate) : ''} ${countdown ? `・${countdown}` : ''}</div>
           ${trip.members ? `<div class="trip-card-members">👥 ${escHtml(trip.members)}</div>` : ''}
@@ -221,14 +515,15 @@
         const todos = currentTrip.todos || [];
         const done = todos.filter(t => t.done).length;
         const pct = todos.length > 0 ? Math.round(done / todos.length * 100) : 0;
-        $('#treeVisual').textContent = getTreeIcon(pct);
+        const treeEl = $('#treeVisual');
+        treeEl.innerHTML = `<img src="${getTreeImage(pct)}" alt="Tree growth" class="tree-growth-img" />`;
         $('#treeProgress').textContent = `${pct}%`;
         const messages = {
-            0: 'タスクを追加して旅行準備を始めよう！',
-            25: '芽が出てきた！この調子！',
-            50: '順調に育ってます！半分クリア！',
-            75: '花が咲きました！もう少し！',
-            100: '🎉 準備完了！いってらっしゃい！'
+            0: t('treeMsg0'),
+            25: t('treeMsg25'),
+            50: t('treeMsg50'),
+            75: t('treeMsg75'),
+            100: t('treeMsg100')
         };
         const msgKey = pct >= 100 ? 100 : pct >= 75 ? 75 : pct >= 50 ? 50 : pct >= 25 ? 25 : 0;
         $('#treeMessage').textContent = messages[msgKey];
@@ -238,37 +533,43 @@
         info.innerHTML = `
       <div class="info-item">
         <span class="info-item-icon">📅</span>
-        <div><div class="info-item-label">日程</div><div class="info-item-value">${formatDate(currentTrip.date)}${currentTrip.endDate ? ' 〜 ' + formatDate(currentTrip.endDate) : ''}</div></div>
+        <div><div class="info-item-label">${t('dateLabel')}</div><div class="info-item-value">${formatDate(currentTrip.date)}${currentTrip.endDate ? ' 〜 ' + formatDate(currentTrip.endDate) : ''}</div></div>
       </div>
       <div class="info-item">
         <span class="info-item-icon">👥</span>
-        <div><div class="info-item-label">メンバー</div><div class="info-item-value">${escHtml(currentTrip.members) || '未設定'}</div></div>
+        <div><div class="info-item-label">${t('membersLabel')}</div><div class="info-item-value">${escHtml(currentTrip.members) || t('notSet')}</div></div>
       </div>
       <div class="info-item">
         <span class="info-item-icon">💰</span>
-        <div><div class="info-item-label">予算</div><div class="info-item-value">${escHtml(currentTrip.budget) || '未設定'}</div></div>
+        <div><div class="info-item-label">${t('budgetLabel')}</div><div class="info-item-value">${escHtml(currentTrip.budget) || t('notSet')}</div></div>
       </div>
       <div class="info-item">
         <span class="info-item-icon">✅</span>
-        <div><div class="info-item-label">TODO進捗</div><div class="info-item-value">${done} / ${todos.length} 完了</div></div>
+        <div><div class="info-item-label">${t('todoProgressLabel')}</div><div class="info-item-value">${done} / ${todos.length} ${t('completed')}</div></div>
       </div>
       <div class="info-item">
         <span class="info-item-icon">📍</span>
-        <div><div class="info-item-label">行きたい場所</div><div class="info-item-value">${(currentTrip.places || []).length} 件</div></div>
+        <div><div class="info-item-label">${t('placesLabel')}</div><div class="info-item-value">${(currentTrip.places || []).length} ${t('items')}</div></div>
       </div>
       <div class="info-item">
         <span class="info-item-icon">📖</span>
-        <div><div class="info-item-label">日記</div><div class="info-item-value">${(currentTrip.diary || []).length} 件</div></div>
+        <div><div class="info-item-label">${t('diaryLabel')}</div><div class="info-item-value">${(currentTrip.diary || []).length} ${t('items')}</div></div>
       </div>
     `;
     }
 
-    function getTreeIcon(pct) {
-        if (pct >= 100) return '🌳';
-        if (pct >= 75) return '🌸';
-        if (pct >= 50) return '🌲';
-        if (pct >= 25) return '🌿';
-        return '🌱';
+    function getTreeImage(pct) {
+        // Map percentage to image number 1-10
+        if (pct >= 100) return 'images/tree/10.jpg';
+        if (pct >= 90) return 'images/tree/9.jpg';
+        if (pct >= 80) return 'images/tree/8.jpg';
+        if (pct >= 70) return 'images/tree/7.jpg';
+        if (pct >= 60) return 'images/tree/6.jpg';
+        if (pct >= 50) return 'images/tree/5.jpg';
+        if (pct >= 40) return 'images/tree/4.jpg';
+        if (pct >= 30) return 'images/tree/3.jpg';
+        if (pct >= 10) return 'images/tree/2.jpg';
+        return 'images/tree/1.jpg';
     }
 
     // ========== 日記 ==========
@@ -632,6 +933,8 @@
     }
 
     // ========== スケジュール ==========
+    let editingScheduleId = null;
+
     function renderSchedule() {
         if (!currentTrip) return;
         initScheduleDate();
@@ -643,7 +946,7 @@
 
         const container = $('#scheduleTimeline');
         if (items.length === 0) {
-            container.innerHTML = '<div class="schedule-empty">🕐 この日の予定はまだありません。<br>「予定追加」から追加しましょう！</div>';
+            container.innerHTML = `<div class="schedule-empty">${t('scheduleEmpty')}</div>`;
             return;
         }
         container.innerHTML = items.map(s => `
@@ -653,6 +956,7 @@
         ${s.memo ? `<div class="schedule-item-memo">${escHtml(s.memo)}</div>` : ''}
         ${s.endTime ? `<div class="schedule-item-memo">〜 ${s.endTime}</div>` : ''}
         <div class="schedule-item-actions">
+          <span class="schedule-item-edit" onclick="TaviNote.editScheduleItem('${s.id}')">✏️</span>
           <span class="schedule-item-delete" onclick="TaviNote.deleteScheduleItem('${s.id}')">✕</span>
         </div>
       </div>
@@ -666,25 +970,66 @@
         if (!scheduleDate) scheduleDate = new Date();
     }
 
+    function editScheduleItem(id) {
+        if (!currentTrip) return;
+        const item = (currentTrip.schedule || []).find(s => s.id === id);
+        if (!item) return;
+        editingScheduleId = id;
+        $('#inputScheduleText').value = item.text || '';
+        $('#inputScheduleStart').value = item.startTime || '';
+        $('#inputScheduleEnd').value = item.endTime || '';
+        $('#inputScheduleMemo').value = item.memo || '';
+        // Update modal title and button for edit mode
+        const modalTitle = $('#modalSchedule .modal-header h2');
+        const saveBtn = $('#btnSaveSchedule');
+        if (modalTitle) modalTitle.textContent = t('editScheduleTitle');
+        if (saveBtn) saveBtn.textContent = t('update');
+        openModal('modalSchedule');
+    }
+
     function saveScheduleItem() {
         if (!currentTrip) return;
         const text = $('#inputScheduleText').value.trim();
-        if (!text) { showToast('予定の内容を入力してください'); return; }
+        if (!text) { showToast(t('toastEnterContent')); return; }
         if (!currentTrip.schedule) currentTrip.schedule = [];
         initScheduleDate();
-        currentTrip.schedule.push({
-            id: generateId(),
-            date: scheduleDate.toISOString().split('T')[0],
-            text,
-            startTime: $('#inputScheduleStart').value,
-            endTime: $('#inputScheduleEnd').value,
-            memo: $('#inputScheduleMemo').value.trim()
-        });
-        saveData();
-        closeModal('modalSchedule');
-        clearForm('modalSchedule');
-        renderSchedule();
-        showToast('🕐 予定を追加しました！');
+
+        if (editingScheduleId) {
+            // Edit existing item
+            const item = currentTrip.schedule.find(s => s.id === editingScheduleId);
+            if (item) {
+                item.text = text;
+                item.startTime = $('#inputScheduleStart').value;
+                item.endTime = $('#inputScheduleEnd').value;
+                item.memo = $('#inputScheduleMemo').value.trim();
+            }
+            editingScheduleId = null;
+            saveData();
+            closeModal('modalSchedule');
+            clearForm('modalSchedule');
+            renderSchedule();
+            showToast(t('toastScheduleUpdated'));
+        } else {
+            // Add new item
+            currentTrip.schedule.push({
+                id: generateId(),
+                date: scheduleDate.toISOString().split('T')[0],
+                text,
+                startTime: $('#inputScheduleStart').value,
+                endTime: $('#inputScheduleEnd').value,
+                memo: $('#inputScheduleMemo').value.trim()
+            });
+            saveData();
+            closeModal('modalSchedule');
+            clearForm('modalSchedule');
+            renderSchedule();
+            showToast(t('toastScheduleAdded'));
+        }
+        // Reset modal title and button
+        const modalTitle = $('#modalSchedule .modal-header h2');
+        const saveBtn = $('#btnSaveSchedule');
+        if (modalTitle) modalTitle.textContent = t('addScheduleTitle');
+        if (saveBtn) saveBtn.textContent = t('save');
     }
 
     function deleteScheduleItem(id) {
@@ -1223,6 +1568,7 @@
     // ========== イベントリスナー ==========
     function init() {
         applyDarkMode();
+        applyLanguage();
 
         // ダークモード
         $('#darkModeToggle').addEventListener('click', () => {
@@ -1230,6 +1576,10 @@
             saveData();
             applyDarkMode();
         });
+
+        // 言語切替
+        const langBtn = document.getElementById('langToggle');
+        if (langBtn) langBtn.addEventListener('click', toggleLanguage);
 
         // サイドバーメニュー
         $$('.sidebar-menu li').forEach(li => {
@@ -1308,7 +1658,15 @@
         });
 
         // スケジュール
-        $('#btnNewScheduleItem').addEventListener('click', () => { clearForm('modalSchedule'); openModal('modalSchedule'); });
+        $('#btnNewScheduleItem').addEventListener('click', () => {
+            editingScheduleId = null;
+            clearForm('modalSchedule');
+            const modalTitle = $('#modalSchedule .modal-header h2');
+            const saveBtn = $('#btnSaveSchedule');
+            if (modalTitle) modalTitle.textContent = t('addScheduleTitle');
+            if (saveBtn) saveBtn.textContent = t('save');
+            openModal('modalSchedule');
+        });
         $('#btnSaveSchedule').addEventListener('click', saveScheduleItem);
         $('#schedulePrevDay').addEventListener('click', () => {
             initScheduleDate();
@@ -1393,7 +1751,7 @@
         toggleTodo, deleteTodo,
         editDiary, deleteDiary,
         toggleFav, deletePlace, focusPlace,
-        deleteScheduleItem,
+        editScheduleItem, deleteScheduleItem,
         deleteMemo,
         deleteTicket,
         togglePacking, deletePacking,

@@ -25,27 +25,30 @@
         <ul class="sidebar-menu">
             <li class="active" data-view="dashboard">
                 <span class="menu-icon">🏠</span>
-                <span class="menu-label">ホーム</span>
+                <span class="menu-label" data-i18n="home">ホーム</span>
             </li>
             <li data-view="memo-board">
                 <span class="menu-icon">📌</span>
-                <span class="menu-label">メモボード</span>
+                <span class="menu-label" data-i18n="memoBoard">メモボード</span>
             </li>
             <li data-view="search-links">
                 <span class="menu-icon">🚄</span>
-                <span class="menu-label">交通・宿検索</span>
+                <span class="menu-label" data-i18n="transportSearch">交通・宿検索</span>
             </li>
             <li data-view="currency">
                 <span class="menu-icon">💱</span>
-                <span class="menu-label">外貨計算機</span>
+                <span class="menu-label" data-i18n="currencyCalc">外貨計算機</span>
             </li>
             <li data-view="nearby">
                 <span class="menu-icon">📍</span>
-                <span class="menu-label">周辺検索</span>
+                <span class="menu-label" data-i18n="nearbySearch">周辺検索</span>
             </li>
         </ul>
         <div class="sidebar-footer">
-            <button id="darkModeToggle" class="dark-toggle" title="ダークモード切替">
+            <button id="langToggle" class="dark-toggle" title="言語切替">
+                <span class="toggle-icon">🇬🇧 EN</span>
+            </button>
+            <button id="darkModeToggle" class="dark-toggle" data-i18n-title="darkModeTitle" title="ダークモード切替">
                 <span class="toggle-icon">🌙</span>
             </button>
         </div>
@@ -57,9 +60,9 @@
         <!-- ===== ダッシュボード ===== -->
         <section id="view-dashboard" class="view active">
             <header class="view-header">
-                <h1>🌿 マイ旅行プラン</h1>
+                <h1 data-i18n="myTripPlans">🌿 マイ旅行プラン</h1>
                 <button id="btnNewTrip" class="btn btn-primary">
-                    <span>＋</span> 新しい旅行
+                    <span>＋</span> <span data-i18n="newTrip">新しい旅行</span>
                 </button>
             </header>
             <div id="tripCardsContainer" class="trip-cards-grid">
@@ -67,36 +70,36 @@
             </div>
             <div id="emptyState" class="empty-state">
                 <div class="empty-illustration">🗺️</div>
-                <h2>まだ旅行プランがありません</h2>
-                <p>「新しい旅行」ボタンから、最初の旅行を計画しましょう！</p>
+                <h2 data-i18n="noTripsYet">まだ旅行プランがありません</h2>
+                <p data-i18n="noTripsHint">「新しい旅行」ボタンから、最初の旅行を計画しましょう！</p>
             </div>
         </section>
 
         <!-- ===== 旅行詳細ビュー ===== -->
         <section id="view-trip-detail" class="view">
             <header class="view-header trip-detail-header">
-                <button id="btnBackToDashboard" class="btn btn-ghost">← 戻る</button>
+                <button id="btnBackToDashboard" class="btn btn-ghost" data-i18n="back">← 戻る</button>
                 <div class="trip-title-area">
                     <h1 id="tripDetailTitle"></h1>
                     <div id="tripCountdown" class="countdown-badge"></div>
                 </div>
                 <div class="trip-header-actions">
-                    <button id="btnEditTrip" class="btn btn-secondary btn-sm">✏️ 編集</button>
-                    <button id="btnDeleteTrip" class="btn btn-danger btn-sm">🗑️ 削除</button>
+                    <button id="btnEditTrip" class="btn btn-secondary btn-sm" data-i18n="edit">✏️ 編集</button>
+                    <button id="btnDeleteTrip" class="btn btn-danger btn-sm" data-i18n="delete">🗑️ 削除</button>
                 </div>
             </header>
 
             <!-- サブタブナビ -->
             <nav class="sub-tabs">
-                <button class="sub-tab active" data-tab="overview">🌳 概要</button>
-                <button class="sub-tab" data-tab="diary">📖 日記</button>
-                <button class="sub-tab" data-tab="places">📍 場所</button>
-                <button class="sub-tab" data-tab="todo">✅ TODO</button>
-                <button class="sub-tab" data-tab="schedule">🕐 スケジュール</button>
-                <button class="sub-tab" data-tab="tickets">🎫 チケット</button>
-                <button class="sub-tab" data-tab="packing">👜 持ち物</button>
-                <button class="sub-tab" data-tab="money">💰 お金</button>
-                <button class="sub-tab" data-tab="vote">🗳️ 投票</button>
+                <button class="sub-tab active" data-tab="overview" data-i18n="overview">🌳 概要</button>
+                <button class="sub-tab" data-tab="diary" data-i18n="diary">📖 日記</button>
+                <button class="sub-tab" data-tab="places" data-i18n="places">📍 場所</button>
+                <button class="sub-tab" data-tab="todo" data-i18n="todo">✅ TODO</button>
+                <button class="sub-tab" data-tab="schedule" data-i18n="schedule">🕐 スケジュール</button>
+                <button class="sub-tab" data-tab="tickets" data-i18n="tickets">🎫 チケット</button>
+                <button class="sub-tab" data-tab="packing" data-i18n="packing">👜 持ち物</button>
+                <button class="sub-tab" data-tab="money" data-i18n="money">💰 お金</button>
+                <button class="sub-tab" data-tab="vote" data-i18n="vote">🗳️ 投票</button>
             </nav>
 
             <!-- ① 概要タブ -->
@@ -104,7 +107,7 @@
                 <div class="overview-grid">
                     <!-- 木の成長 -->
                     <div class="card tree-card">
-                        <h3>🌳 準備の進み具合</h3>
+                        <h3 data-i18n="prepProgress">🌳 準備の進み具合</h3>
                         <div id="treeContainer" class="tree-container">
                             <div id="treeVisual" class="tree-visual"></div>
                             <div id="treeProgress" class="tree-progress-text"></div>
@@ -113,18 +116,20 @@
                     </div>
                     <!-- 旅行情報 -->
                     <div class="card info-card">
-                        <h3>📋 旅行の情報</h3>
+                        <h3 data-i18n="tripInfo">📋 旅行の情報</h3>
                         <div id="tripInfoContent" class="trip-info-content"></div>
                         <div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap;">
-                            <button id="btnExportShiori" class="btn btn-secondary btn-sm">📄 しおりを作る</button>
+                            <button id="btnExportShiori" class="btn btn-secondary btn-sm" data-i18n="createShiori">📄
+                                しおりを作る</button>
                         </div>
                     </div>
                 </div>
                 <!-- リマインダー -->
                 <div class="card" style="margin-top:20px;">
-                    <h3>⏰ リマインダー</h3>
+                    <h3 data-i18n="reminder">⏰ リマインダー</h3>
                     <div id="reminderList" class="reminder-list"></div>
-                    <button id="btnNewReminder" class="btn btn-primary btn-sm" style="margin-top:12px;">＋
+                    <button id="btnNewReminder" class="btn btn-primary btn-sm" style="margin-top:12px;"
+                        data-i18n="addReminder">＋
                         リマインダー追加</button>
                 </div>
             </div>
@@ -132,8 +137,8 @@
             <!-- ② 日記タブ -->
             <div class="tab-content" data-tab-content="diary">
                 <div class="diary-header">
-                    <h3>📖 旅行日記</h3>
-                    <button id="btnNewDiary" class="btn btn-primary btn-sm">＋ 日記を書く</button>
+                    <h3 data-i18n="travelDiary">📖 旅行日記</h3>
+                    <button id="btnNewDiary" class="btn btn-primary btn-sm" data-i18n="writeDiary">＋ 日記を書く</button>
                 </div>
                 <div id="diaryEntries" class="diary-entries"></div>
             </div>
@@ -143,8 +148,9 @@
                 <div class="places-layout">
                     <div class="places-list-area">
                         <div class="places-header">
-                            <h3>📍 行きたい場所</h3>
-                            <button id="btnNewPlace" class="btn btn-primary btn-sm">＋ 場所を追加</button>
+                            <h3 data-i18n="wantToGo">📍 行きたい場所</h3>
+                            <button id="btnNewPlace" class="btn btn-primary btn-sm" data-i18n="addPlace">＋
+                                場所を追加</button>
                         </div>
                         <div class="places-filter">
                             <button class="filter-btn active" data-category="all">すべて</button>
@@ -167,8 +173,8 @@
                 <div class="todo-layout">
                     <div class="todo-list-area">
                         <div class="todo-header">
-                            <h3>✅ やることリスト</h3>
-                            <button id="btnNewTodo" class="btn btn-primary btn-sm">＋ 追加</button>
+                            <h3 data-i18n="todoList">✅ やることリスト</h3>
+                            <button id="btnNewTodo" class="btn btn-primary btn-sm" data-i18n="add">＋ 追加</button>
                         </div>
                         <div id="todoList" class="todo-list"></div>
                     </div>
@@ -186,13 +192,14 @@
             <!-- ⑤ スケジュールタブ -->
             <div class="tab-content" data-tab-content="schedule">
                 <div class="schedule-header">
-                    <h3>🕐 1日のスケジュール</h3>
+                    <h3 data-i18n="dailySchedule">🕐 1日のスケジュール</h3>
                     <div class="schedule-day-selector">
                         <button id="schedulePrevDay" class="btn btn-ghost btn-sm">◀</button>
                         <span id="scheduleCurrentDay" class="schedule-day-label"></span>
                         <button id="scheduleNextDay" class="btn btn-ghost btn-sm">▶</button>
                     </div>
-                    <button id="btnNewScheduleItem" class="btn btn-primary btn-sm">＋ 予定追加</button>
+                    <button id="btnNewScheduleItem" class="btn btn-primary btn-sm" data-i18n="addSchedule">＋
+                        予定追加</button>
                 </div>
                 <div id="scheduleTimeline" class="schedule-timeline"></div>
             </div>
@@ -200,8 +207,8 @@
             <!-- ⑥ チケット管理タブ -->
             <div class="tab-content" data-tab-content="tickets">
                 <div class="diary-header">
-                    <h3>🎫 チケット・予約管理</h3>
-                    <button id="btnNewTicket" class="btn btn-primary btn-sm">＋ チケット追加</button>
+                    <h3 data-i18n="ticketManage">🎫 チケット・予約管理</h3>
+                    <button id="btnNewTicket" class="btn btn-primary btn-sm" data-i18n="addTicket">＋ チケット追加</button>
                 </div>
                 <div id="ticketList" class="ticket-list"></div>
             </div>
@@ -209,7 +216,7 @@
             <!-- ⑦ 持ち物リストタブ -->
             <div class="tab-content" data-tab-content="packing">
                 <div class="diary-header">
-                    <h3>👜 持ち物チェックリスト</h3>
+                    <h3 data-i18n="packingList">👜 持ち物チェックリスト</h3>
                     <div style="display:flex;gap:8px;flex-wrap:wrap;">
                         <select id="selectPackingTemplate" class="form-select-inline">
                             <option value="">テンプレートを選ぶ</option>
@@ -230,13 +237,13 @@
             <div class="tab-content" data-tab-content="money">
                 <!-- 予算シミュレーション -->
                 <div class="card" style="margin-bottom:20px;">
-                    <h3>📊 予算シミュレーション</h3>
+                    <h3 data-i18n="budgetSim">📊 予算シミュレーション</h3>
                     <div id="budgetSummary" class="budget-summary"></div>
                 </div>
                 <!-- 支出記録 -->
                 <div class="diary-header">
-                    <h3>💰 支出の記録</h3>
-                    <button id="btnNewExpense" class="btn btn-primary btn-sm">＋ 支出追加</button>
+                    <h3 data-i18n="expenseRecord">💰 支出の記録</h3>
+                    <button id="btnNewExpense" class="btn btn-primary btn-sm" data-i18n="addExpense">＋ 支出追加</button>
                 </div>
                 <div id="expenseList" class="expense-list"></div>
                 <div id="splitResult" class="split-result"></div>
@@ -245,8 +252,8 @@
             <!-- ⑨ 投票タブ -->
             <div class="tab-content" data-tab-content="vote">
                 <div class="diary-header">
-                    <h3>🗳️ みんなで投票</h3>
-                    <button id="btnNewPoll" class="btn btn-primary btn-sm">＋ 投票を作る</button>
+                    <h3 data-i18n="voteTitle">🗳️ みんなで投票</h3>
+                    <button id="btnNewPoll" class="btn btn-primary btn-sm" data-i18n="createVote">＋ 投票を作る</button>
                 </div>
                 <div id="pollList" class="poll-list"></div>
             </div>
@@ -255,8 +262,8 @@
         <!-- ===== メモボード ===== -->
         <section id="view-memo-board" class="view">
             <header class="view-header">
-                <h1>📌 メモボード</h1>
-                <button id="btnNewMemo" class="btn btn-primary">＋ メモを追加</button>
+                <h1 data-i18n="memoBoardTitle">📌 メモボード</h1>
+                <button id="btnNewMemo" class="btn btn-primary" data-i18n="addMemo">＋ メモを追加</button>
             </header>
             <div id="memoBoard" class="memo-board">
                 <div class="board-wood-grain"></div>
@@ -272,7 +279,7 @@
         <!-- ===== 交通・宿検索ビュー ===== -->
         <section id="view-search-links" class="view">
             <header class="view-header">
-                <h1>🚄 交通・宿・おでかけ検索</h1>
+                <h1 data-i18n="transportTitle">🚄 交通・宿・おでかけ検索</h1>
             </header>
             <div class="search-links-grid">
                 <!-- 新幹線予約 -->
@@ -407,7 +414,7 @@
         <!-- ===== 外貨計算機ビュー ===== -->
         <section id="view-currency" class="view">
             <header class="view-header">
-                <h1>💱 外貨計算機</h1>
+                <h1 data-i18n="currencyTitle">💱 外貨計算機</h1>
             </header>
             <div class="currency-converter">
                 <div class="card" style="max-width:500px;margin:0 auto;">
@@ -459,7 +466,7 @@
         <!-- ===== 周辺検索ビュー ===== -->
         <section id="view-nearby" class="view">
             <header class="view-header">
-                <h1>📍 周辺検索</h1>
+                <h1 data-i18n="nearbyTitle">📍 周辺検索</h1>
             </header>
             <div class="nearby-search">
                 <div class="card" style="margin-bottom:16px;">
@@ -648,7 +655,7 @@
     <div id="modalSchedule" class="modal-overlay">
         <div class="modal">
             <div class="modal-header">
-                <h2>🕐 予定を追加</h2>
+                <h2 data-i18n="addScheduleTitle">🕐 予定を追加</h2>
                 <button class="modal-close" data-close="modalSchedule">✕</button>
             </div>
             <div class="modal-body">
@@ -673,7 +680,7 @@
             </div>
             <div class="modal-footer">
                 <button class="btn btn-ghost" data-close="modalSchedule">キャンセル</button>
-                <button id="btnSaveSchedule" class="btn btn-primary">追加</button>
+                <button id="btnSaveSchedule" class="btn btn-primary" data-i18n="save">追加</button>
             </div>
         </div>
     </div>

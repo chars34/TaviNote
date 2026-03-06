@@ -143,6 +143,9 @@ body {
 .sidebar-footer {
     padding: 16px 20px;
     border-top: 1px solid var(--border);
+    display: flex;
+    gap: 8px;
+    justify-content: center;
 }
 
 .dark-toggle {
@@ -404,6 +407,17 @@ body {
     right: 16px;
 }
 
+.trip-card-tree-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    box-shadow: var(--shadow);
+}
+
 /* 空の状態 */
 .empty-state {
     text-align: center;
@@ -492,10 +506,20 @@ body {
 }
 
 .tree-visual {
-    font-size: 100px;
     line-height: 1;
     transition: all 0.6s ease;
     animation: treeGrow 0.6s ease;
+}
+
+.tree-growth-img {
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    object-fit: cover;
+    box-shadow: var(--shadow);
+    transition: all 0.6s ease;
 }
 
 @keyframes treeGrow {
