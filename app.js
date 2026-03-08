@@ -123,18 +123,29 @@
             notSet: '未設定',
             // 交通検索カード
             shinkansenTitle: '🎫 新幹線・特急の予約', shinkansenDesc: 'きっぷのネット予約はこちら',
+            ekinet: 'えきねっと（JR東日本）', smartex: 'スマートEX（東海道・山陽）', e5489: 'e5489（JR西日本）', jrkyushu: 'JR九州ネット予約',
             transferTitle: '🚃 乗り換え・路線検索', transferDesc: '電車の時刻や乗り換えを調べる',
+            yahooTransit: 'Yahoo!路線情報', jorudan: 'ジョルダン', ekitan: 'えきたん',
             busTitle: '🚌 高速バス', busDesc: '安く移動するなら高速バス',
+            busHikaku: 'バス比較なび', kosokubus: '高速バスドットコム',
             flightTitle: '✈️ 飛行機', flightDesc: '航空券を探す',
+            skyscanner: 'スカイスキャナー', googleFlights: 'Google フライト', traveljp: 'トラベルjp',
             rentalCarTitle: '🚗 レンタカー', rentalCarDesc: '車を借りて自由にドライブ',
+            nipponRentacar: 'ニッポンレンタカー', timescar: 'タイムズカーレンタル', skyticketCar: 'スカイチケット',
             hotelTitle: '🏨 旅館・ホテル', hotelDesc: '宿泊先を探す',
+            jalan: 'じゃらん', rakutenTravel: '楽天トラベル', ikyu: '一休.com',
             gourmetTitle: '🍽️ グルメ・レストラン', gourmetDesc: '現地のおいしいお店を探す',
-            spotTitle: '🏛️ 観光スポット・体験', spotDesc: '遊び場や観光地を探す',
+            tabelog: '食べログ', hotpepper: 'ホットペッパーグルメ',
+            touristTitle: '🏛️ 観光スポット・体験', touristDesc: '遊び場や観光地を探す',
+            jalanKankou: 'じゃらん観光ガイド', asoview: 'アソビュー！', tripadvisor: 'トリップアドバイザー',
             mapTitle: '🗺️ 地図・ルート', mapDesc: 'ルートや周辺を確認する',
+            googleMap: 'Google マップ', yahooMap: 'Yahoo!地図',
             weatherTitle: '☀️ 天気予報', weatherDesc: '旅行先のお天気をチェック',
+            weathernews: 'ウェザーニュース',
             prepTitle: '🛡️ 旅の準備', prepDesc: '保険やWi-Fiレンタルなど',
+            travelInsurance: '海外旅行保険', globalWifi: 'グローバルWiFi', iijmioSim: 'IIJmio海外SIM',
             searchMemoTitle: '🗒️ 検索メモ', searchMemoDesc: '調べた内容をメモしておこう',
-            saveMemo: 'メモを保存',
+            saveSearchMemo: 'メモを保存',
             // フォトギャラリー
             photos: '📸 写真', photosTitle: '📸 フォトギャラリー',
             addPhotoBtn: '＋ 写真を追加', noPhotos: 'まだ写真がありません',
@@ -152,10 +163,14 @@
             getLocation: '📍 現在地を取得', locationHint: '位置情報を取得してください',
             convenience: '🏪 コンビニ', station: '🚉 駅', restaurant: '🍽️ 食事',
             cafe: '☕ カフェ', hospital: '🏥 病院', atm: '🏧 ATM', toilet: '🚻 トイレ',
+            nearbyConvenience: '🏪 コンビニ', nearbyStation: '🚉 駅',
+            nearbyRestaurant: '🍽️ 食事', nearbyCafe: '☕ カフェ',
+            nearbyHospital: '🏥 病院', nearbyAtm: '🏧 ATM', nearbyToilet: '🚻 トイレ',
             // スケジュール空
             scheduleEmpty: '🕐 この日の予定はまだありません。<br>「予定追加」から追加しましょう！',
             // ダークモード
             darkModeTitle: 'ダークモード切替',
+            langToggleTitle: '言語切替',
             // 言語
             langToggle: '🇬🇧 EN',
             daysUntilTrip: '日後',
@@ -196,6 +211,120 @@
             exPollQuestion: '例：ランチはどこにする？',
             exPollOptions: '寿司屋\\nイタリアン\\nラーメン',
             exReminderContent: '例：充電器を確認する',
+            // Calendar
+            calendarYear: '年',
+            calendarMonth: '月',
+            calSun: '日', calMon: '月', calTue: '火', calWed: '水', calThu: '木', calFri: '金', calSat: '土',
+            // Dashboard countdown
+            daysLeft: '日後',
+            daysAgoLabel: '日前',
+            todayLabel: '🎉 今日！',
+            completedCount: ' 完了',
+            // Trip detail countdown
+            departureDaysLeft: '🗓️ 出発まであと ',
+            departureDaysUnit: ' 日',
+            departureToday: '🎉 今日が出発日！',
+            departedDaysAgo: '✈️ ',
+            departedDaysAgoUnit: '日前に出発',
+            // Empty states
+            diaryEmpty: '📖 まだ日記がありません。<br>「日記を書く」から最初の一歩を！',
+            placesEmpty: '📍 場所を追加してみよう！',
+            todoEmpty: '✅ やることを追加してみよう！',
+            ticketEmpty: '🎫 チケットや予約情報を追加しよう！',
+            packingEmpty: '👜 テンプレートを選んで持ち物を追加しよう！',
+            expenseEmpty: '💰 支出を記録してみよう！',
+            pollEmpty: '🗳️ 投票を作ってみんなの意見を聞こう！',
+            reminderEmpty: '⏰ リマインダーを追加して忘れもの防止！',
+            budgetEmpty: '支出を記録すると自動計算されます',
+            // Toast messages
+            toastTripNameRequired: '旅行の名前を入力してください',
+            toastTripCreated: '🗺️ 「',
+            toastTripCreatedSuffix: '」を作成しました！',
+            toastRoomIdRequired: 'ルームIDを入力してください',
+            toastAlreadyMember: 'すでにこの旅行のメンバーです',
+            toastJoined: '🎉 旅行プランに参加しました！',
+            toastInvalidRoomId: '⚠️ 有効なルームIDではありません',
+            toastNetworkError: '通信エラーが発生しました',
+            toastWaitAndRetry: '通信の準備ができていません。少し待ってから再試行してください',
+            toastDiaryTitleRequired: 'タイトルを入力してください',
+            toastDiarySaved: '📖 日記を保存しました！',
+            toastDiaryDeleted: '日記を削除しました',
+            toastPlaceNameRequired: '場所の名前を入力してください',
+            toastPlaceAdded: '📍 「',
+            toastPlaceAddedSuffix: '」を追加しました！',
+            toastPlaceFound: '📍 場所が見つかりました！',
+            toastPlaceNotFound: '場所が見つかりませんでした',
+            toastSearchError: '検索中にエラーが発生しました',
+            toastAddressRequired: '住所を入力してください',
+            toastTodoRequired: 'やることを入力してください',
+            toastTodoAdded: '✅ やることを追加しました！',
+            toastTreeGrew: '🌿 木が少し成長しました！',
+            toastTripUpdated: '✏️ 旅行情報を更新しました！',
+            toastTicketTitleRequired: 'タイトルを入力してください',
+            toastTicketSaved: '🎫 チケットを保存しました！',
+            toastTemplateRequired: 'テンプレートを選んでください',
+            toastTemplateApplied: '👜 テンプレートを適用しました！',
+            toastPackingItemRequired: 'アイテム名を入力してください',
+            toastPackingItemAdded: '👜 持ち物を追加しました！',
+            toastExpenseRequired: '何に使ったか入力してください',
+            toastExpenseSaved: '💰 支出を記録しました！',
+            toastPollRequired: '質問と選択肢を入力してください',
+            toastPollCreated: '🗳️ 投票を作成しました！',
+            toastReminderRequired: '内容を入力してください',
+            toastReminderAdded: '⏰ リマインダーを追加しました！',
+            toastMemoRequired: 'メモの内容を入力してください',
+            toastMemoPinned: '📌 メモをボードに貼りました！',
+            toastMemoRemoved: 'メモを外しました',
+            toastMemoSaved: '🗒️ メモを保存しました！',
+            toastCurrencyRateRequired: 'レートを入力してください',
+            toastCurrencyFetching: '🌐 レートを取得中...',
+            toastCurrencyNotFound: 'レートが見つかりませんでした',
+            toastCurrencyFetchFailed: 'レートの取得に失敗しました',
+            toastGpsUnavailable: 'GPSが使えません',
+            nearbyFetching: '取得中...',
+            nearbySuccess: '✅ 取得成功',
+            nearbyFailed: '❌ 位置情報を取得できませんでした',
+            nearbyLocationFailed: '位置情報の取得に失敗しました',
+            nearbyFirst: 'まず現在地を取得してください',
+            nearbyNone: '近くに見つかりませんでした',
+            nearbyNoName: '名称不明',
+            nearbyAbout: '約',
+            nearbyMeters: 'm',
+            nearbyFound: '件見つかりました！',
+            toastShioriCreated: '📄 しおりを作成しました！印刷してお使いください',
+            toastCopiedRoomId: '📋 ルームIDをコピーしました！',
+            toastCopiedShareLink: '📋 招待リンクをコピーしました！',
+            // Confirm dialogs
+            confirmDeleteDiary: 'この日記を削除しますか？',
+            confirmDeleteTrip: 'この旅行を削除してもよいですか？\nすべてのデータが消えます。',
+            confirmDeletePhoto: 'この写真を削除しますか？',
+            // Budget labels
+            budgetLabelBudget: '予算',
+            budgetLabelTotal: '合計支出',
+            budgetLabelRemaining: '残り',
+            budgetLabelPerPerson: '1人あたり',
+            // Split result
+            splitTitle: '💸 割り勘の結果',
+            splitPerPerson: '1人あたり',
+            splitReceive: ' 受け取り',
+            splitPay: ' 支払い',
+            // Expense meta
+            paidBy: 'が払い',
+            // Vote
+            voteCount: '票',
+            voteDeleteBtn: '🗑️ 削除',
+            // Shiori
+            shioriDateLabel: '日程:',
+            shioriMembersLabel: 'メンバー:',
+            shioriBudgetLabel: '予算:',
+            shioriNotSet: '未設定',
+            shioriPlaces: '📍 行きたい場所',
+            shioriSchedule: '📅 スケジュール',
+            // Edit/Delete buttons in diary
+            editBtn: '✏️ 編集',
+            deleteBtn: '🗑️ 削除',
+            // Calendar month/year format
+            calendarYearMonth: '',
         },
         en: {
             home: 'Home', memoBoard: 'Memo Board', transportSearch: 'Transport & Hotels',
@@ -344,6 +473,181 @@
             exPollQuestion: 'e.g., Where for lunch?',
             exPollOptions: 'Sushi\\nItalian\\nRamen',
             exReminderContent: 'e.g., Check chargers',
+            // Calendar
+            calendarYear: '',
+            calendarMonth: '',
+            calSun: 'Su', calMon: 'Mo', calTue: 'Tu', calWed: 'We', calThu: 'Th', calFri: 'Fr', calSat: 'Sa',
+            // Dashboard countdown
+            daysLeft: ' days to go',
+            daysAgoLabel: ' days ago',
+            todayLabel: '🎉 Today!',
+            completedCount: ' completed',
+            // Trip detail countdown
+            departureDaysLeft: '🗓️ Departure in ',
+            departureDaysUnit: ' days',
+            departureToday: '🎉 Today is departure day!',
+            departedDaysAgo: '✈️ Departed ',
+            departedDaysAgoUnit: ' days ago',
+            // Empty states
+            diaryEmpty: '📖 No diary entries yet.<br>Start writing with "Write Diary"!',
+            placesEmpty: '📍 Add a place to visit!',
+            todoEmpty: '✅ Add something to do!',
+            ticketEmpty: '🎫 Add tickets and reservation info!',
+            packingEmpty: '👜 Choose a template to add packing items!',
+            expenseEmpty: '💰 Start recording expenses!',
+            pollEmpty: '🗳️ Create a vote to hear everyone\'s opinion!',
+            reminderEmpty: '⏰ Add reminders to prevent forgetting!',
+            budgetEmpty: 'Budget summaries appear once expenses are recorded',
+            // Toast messages
+            toastTripNameRequired: 'Please enter a trip name',
+            toastTripCreated: '🗺️ Created "',
+            toastTripCreatedSuffix: '"!',
+            toastRoomIdRequired: 'Please enter a Room ID',
+            toastAlreadyMember: 'You are already a member of this trip',
+            toastJoined: '🎉 Joined the trip!',
+            toastInvalidRoomId: '⚠️ Invalid Room ID',
+            toastNetworkError: 'A network error occurred',
+            toastWaitAndRetry: 'Not ready yet. Please wait and try again',
+            toastDiaryTitleRequired: 'Please enter a title',
+            toastDiarySaved: '📖 Diary saved!',
+            toastDiaryDeleted: 'Diary deleted',
+            toastPlaceNameRequired: 'Please enter a place name',
+            toastPlaceAdded: '📍 Added "',
+            toastPlaceAddedSuffix: '"!',
+            toastPlaceFound: '📍 Place found!',
+            toastPlaceNotFound: 'Place not found',
+            toastSearchError: 'An error occurred during search',
+            toastAddressRequired: 'Please enter an address',
+            toastTodoRequired: 'Please enter a to-do',
+            toastTodoAdded: '✅ To-do added!',
+            toastTreeGrew: '🌿 The tree grew a little!',
+            toastTripUpdated: '✏️ Trip info updated!',
+            toastTicketTitleRequired: 'Please enter a title',
+            toastTicketSaved: '🎫 Ticket saved!',
+            toastTemplateRequired: 'Please choose a template',
+            toastTemplateApplied: '👜 Template applied!',
+            toastPackingItemRequired: 'Please enter an item name',
+            toastPackingItemAdded: '👜 Packing item added!',
+            toastExpenseRequired: 'Please enter what you spent on',
+            toastExpenseSaved: '💰 Expense recorded!',
+            toastPollRequired: 'Please enter a question and options',
+            toastPollCreated: '🗳️ Vote created!',
+            toastReminderRequired: 'Please enter content',
+            toastReminderAdded: '⏰ Reminder added!',
+            toastMemoRequired: 'Please enter memo content',
+            toastMemoPinned: '📌 Memo pinned to the board!',
+            toastMemoRemoved: 'Memo removed',
+            toastMemoSaved: '🗒️ Memo saved!',
+            toastCurrencyRateRequired: 'Please enter a rate',
+            toastCurrencyFetching: '🌐 Fetching rate...',
+            toastCurrencyNotFound: 'Rate not found',
+            toastCurrencyFetchFailed: 'Failed to fetch rate',
+            toastGpsUnavailable: 'GPS is not available',
+            nearbyFetching: 'Fetching...',
+            nearbySuccess: '✅ Location found',
+            nearbyFailed: '❌ Could not get location',
+            nearbyLocationFailed: 'Failed to get location',
+            nearbyFirst: 'Please get your location first',
+            nearbyNone: 'Nothing found nearby',
+            nearbyNoName: 'Unknown',
+            nearbyAbout: 'about ',
+            nearbyMeters: 'm',
+            nearbyFound: ' found!',
+            toastShioriCreated: '📄 Itinerary created! Print it to use',
+            toastCopiedRoomId: '📋 Copied Room ID!',
+            toastCopiedShareLink: '📋 Copied Share Link!',
+            // Confirm dialogs
+            confirmDeleteDiary: 'Delete this diary entry?',
+            confirmDeleteTrip: 'Delete this trip?\nAll data will be lost.',
+            confirmDeletePhoto: 'Delete this photo?',
+            // Budget labels
+            budgetLabelBudget: 'Budget',
+            budgetLabelTotal: 'Total Expenses',
+            budgetLabelRemaining: 'Remaining',
+            budgetLabelPerPerson: 'Per Person',
+            // Split result
+            splitTitle: '💸 Split Result',
+            splitPerPerson: 'Per Person',
+            splitReceive: ' receives',
+            splitPay: ' pays',
+            // Expense meta
+            paidBy: ' paid',
+            // Vote
+            voteCount: ' votes',
+            voteDeleteBtn: '🗑️ Delete',
+            // Shiori
+            shioriDateLabel: 'Dates:',
+            shioriMembersLabel: 'Members:',
+            shioriBudgetLabel: 'Budget:',
+            shioriNotSet: 'Not set',
+            shioriPlaces: '📍 Places to Visit',
+            shioriSchedule: '📅 Schedule',
+            // Edit/Delete buttons in diary
+            editBtn: '✏️ Edit',
+            deleteBtn: '🗑️ Delete',
+            // Packing template items (for English mode)
+            pt_wallet: 'Wallet', pt_phone: 'Phone', pt_charger: 'Charger',
+            pt_clothes: 'Clothes', pt_underwear: 'Underwear', pt_pajamas: 'Pajamas',
+            pt_toothbrush: 'Toothbrush', pt_towel: 'Towel',
+            pt_medicine: 'Medicine', pt_ecoBag: 'Eco Bag',
+            pt_passport: 'Passport', pt_ticket: 'Airline Ticket', pt_walletCC: 'Wallet & Credit Card',
+            pt_insurance: 'Travel Insurance', pt_converter: 'Power Adapter', pt_wifi: 'Wi-Fi Router',
+            pt_shampoo: 'Shampoo', pt_stomachMed: 'Stomach Medicine',
+            pt_localCurrency: 'Local Currency', pt_guidebook: 'Guidebook',
+            pt_battery: 'Portable Charger', pt_drink: 'Drink', pt_rainGear: 'Rain Gear',
+            pt_tent: 'Tent', pt_sleepBag: 'Sleeping Bag', pt_mat: 'Mat',
+            pt_lantern: 'Lantern', pt_stove: 'Stove',
+            pt_cooker: 'Cooker Set', pt_food: 'Food & Drinks',
+            pt_warmClothes: 'Warm Clothes', pt_bugSpray: 'Bug Spray', pt_firstAid: 'First Aid Kit',
+            // Packing categories English
+            packCatValuables: 'Valuables', packCatElectronics: 'Electronics',
+            packCatClothes: 'Clothes', packCatToiletries: 'Toiletries',
+            packCatMedicine: 'Medicine', packCatOther: 'Other',
+            // TODO Template items
+            tmpl_bookAccom: 'Book accommodation', tmpl_checkTransport: 'Research transportation',
+            tmpl_makePackingList: 'Make packing list', tmpl_checkSpots: 'Research tourist spots',
+            tmpl_souvenir: 'Plan souvenirs', tmpl_checkWeather: 'Check weather forecast',
+            tmpl_checkPassport: 'Check passport expiry', tmpl_bookFlight: 'Book flights',
+            tmpl_bookHotel: 'Book hotel', tmpl_travelInsurance: 'Get travel insurance',
+            tmpl_exchangeCurrency: 'Exchange currency', tmpl_arrangeWifi: 'Arrange Wi-Fi rental',
+            tmpl_planTrip: 'Plan your trip',
+            tmpl_chooseDestination: 'Choose a destination', tmpl_bookRestaurant: 'Book a restaurant',
+            tmpl_checkBelongings: 'Check belongings',
+            // Calendar month/year format
+            calendarYearMonth: '',
+            // Transport & Hotels page
+            shinkansenTitle: '🎫 Bullet Train / Express Reservations', shinkansenDesc: 'Book train tickets online',
+            ekinet: 'Ekinet (JR East)', smartex: 'SmartEX (Tokaido/Sanyo)', e5489: 'e5489 (JR West)', jrkyushu: 'JR Kyushu Reservations',
+            transferTitle: '🚃 Transfer / Route Search', transferDesc: 'Look up train schedules and transfers',
+            yahooTransit: 'Yahoo! Route Info', jorudan: 'Jorudan', ekitan: 'Ekitan',
+            busTitle: '🚌 Highway Buses', busDesc: 'Budget travel by highway bus',
+            busHikaku: 'Bus Hikaku Navi', kosokubus: 'Kosoku Bus .com',
+            flightTitle: '✈️ Flights', flightDesc: 'Search for airline tickets',
+            skyscanner: 'Skyscanner', googleFlights: 'Google Flights', traveljp: 'Travel JP',
+            rentalCarTitle: '🚗 Rental Cars', rentalCarDesc: 'Rent a car and drive freely',
+            nipponRentacar: 'Nippon Rent-a-Car', timescar: 'Times Car Rental', skyticketCar: 'Skyticket',
+            hotelTitle: '🏨 Hotels & Inns', hotelDesc: 'Search for accommodation',
+            jalan: 'Jalan', rakutenTravel: 'Rakuten Travel', ikyu: 'Ikyu.com',
+            gourmetTitle: '🍽️ Restaurants & Dining', gourmetDesc: 'Find local restaurants',
+            tabelog: 'Tabelog', hotpepper: 'Hot Pepper Gourmet',
+            touristTitle: '🏛️ Tourist Spots & Experiences', touristDesc: 'Find sightseeing and activities',
+            jalanKankou: 'Jalan Sightseeing Guide', asoview: 'Asoview!', tripadvisor: 'TripAdvisor',
+            mapTitle: '🗺️ Maps & Routes', mapDesc: 'Check routes and surroundings',
+            googleMap: 'Google Maps', yahooMap: 'Yahoo! Maps',
+            weatherTitle: '☀️ Weather Forecast', weatherDesc: 'Check destination weather',
+            weathernews: 'Weather News',
+            prepTitle: '🛡️ Travel Prep', prepDesc: 'Insurance, Wi-Fi rental, etc.',
+            travelInsurance: 'Travel Insurance', globalWifi: 'Global WiFi', iijmioSim: 'IIJmio Overseas SIM',
+            searchMemoTitle: '🗒️ Search Memo', searchMemoDesc: 'Jot down what you researched',
+            saveSearchMemo: 'Save Memo',
+            // Nearby page
+            getLocation: '📍 Get Location', locationHint: 'Get your current location',
+            nearbyConvenience: '🏪 Convenience', nearbyStation: '🚉 Station',
+            nearbyRestaurant: '🍽️ Dining', nearbyCafe: '☕ Cafe',
+            nearbyHospital: '🏥 Hospital', nearbyAtm: '🏧 ATM', nearbyToilet: '🚻 Restroom',
+            // Tooltips
+            langToggleTitle: 'Switch Language',
+            darkModeTitle: 'Toggle Dark Mode',
         }
     };
 
@@ -357,7 +661,7 @@
             const key = el.getAttribute('data-i18n');
             const val = t(key);
             if (el.tagName === 'INPUT' && el.type !== 'text' && el.type !== 'number') return;
-            if (el.tagName === 'OPTION' || el.tagName === 'LABEL' || el.tagName === 'BUTTON' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'SPAN') {
+            if (el.tagName === 'OPTION' || el.tagName === 'LABEL' || el.tagName === 'BUTTON' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'SPAN' || el.tagName === 'A' || el.tagName === 'DIV') {
                 el.textContent = val;
             }
         });
@@ -427,7 +731,7 @@
             localSettings.myTrips.push(shareId);
             saveLocalSettings(localSettings);
             window.history.replaceState({}, document.title, window.location.pathname);
-            showToast('🤝 旅行プランに参加しました！');
+            showToast(t('toastJoined'));
         }
 
         // 旧localStorage（STORAGE_KEY）からの移行処理
@@ -529,6 +833,11 @@
     function formatDate(dateStr) {
         if (!dateStr) return '';
         const d = new Date(dateStr);
+        const lang = appData.lang || 'ja';
+        if (lang === 'en') {
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+        }
         return `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
     }
     function daysUntil(dateStr) {
@@ -649,9 +958,15 @@
             const treeImg = getTreeImage(pct);
             let countdown = '';
             if (days === null) countdown = '';
-            else if (days > 0) countdown = `あと${days}日`;
-            else if (days === 0) countdown = '🎉 今日！';
-            else countdown = `${Math.abs(days)}日前`;
+            else if (days > 0) {
+                const lang = appData.lang || 'ja';
+                countdown = lang === 'ja' ? `あと${days}${t('daysLeft')}` : `${days}${t('daysLeft')}`;
+            }
+            else if (days === 0) countdown = t('todayLabel');
+            else {
+                const lang = appData.lang || 'ja';
+                countdown = lang === 'ja' ? `${Math.abs(days)}${t('daysAgoLabel')}` : `${Math.abs(days)}${t('daysAgoLabel')}`;
+            }
             return `
         <div class="trip-card" data-trip-id="${trip.id}">
           <img src="${treeImg}" alt="Tree" class="trip-card-tree-img" />
@@ -660,7 +975,7 @@
           ${trip.prefecture ? `<div class="trip-card-members" style="color:var(--text);font-weight:bold;">📍 ${escHtml(trip.prefecture)}</div>` : ''}
           ${trip.members ? `<div class="trip-card-members">👥 ${escHtml(trip.members)}</div>` : ''}
           <div class="trip-card-progress"><div class="trip-card-progress-bar" style="width:${pct}%"></div></div>
-          <div style="font-size:12px;color:var(--text-muted);margin-top:6px;">${done}/${todos.length} 完了</div>
+          <div style="font-size:12px;color:var(--text-muted);margin-top:6px;">${done}/${todos.length}${t('completedCount')}</div>
         </div>
       `;
         }).join('');
@@ -674,7 +989,7 @@
     // ========== 旅行作成 ==========
     function createTrip() {
         const name = $('#inputTripName').value.trim();
-        if (!name) { showToast('旅行の名前を入力してください'); return; }
+        if (!name) { showToast(t('toastTripNameRequired')); return; }
         const template = $('#selectTemplate').value;
         const trip = {
             id: generateId(),
@@ -704,16 +1019,16 @@
         saveData();
         closeModal('modalNewTrip');
         clearForm('modalNewTrip');
-        showToast(`🗺️ 「${name}」を作成しました！`);
+        showToast(`${t('toastTripCreated')}${name}${t('toastTripCreatedSuffix')}`);
         renderDashboard();
     }
 
     async function joinTripByRoomId() {
         const roomId = $('#inputRoomId').value.trim();
-        if (!roomId) { showToast('ルームIDを入力してください'); return; }
+        if (!roomId) { showToast(t('toastRoomIdRequired')); return; }
 
         if (localSettings.myTrips.includes(roomId)) {
-            showToast('すでにこの旅行のメンバーです');
+            showToast(t('toastAlreadyMember'));
             closeModal('modalJoinTrip');
             return;
         }
@@ -729,16 +1044,16 @@
 
                     closeModal('modalJoinTrip');
                     $('#inputRoomId').value = '';
-                    showToast('🎉 旅行プランに参加しました！');
+                    showToast(t('toastJoined'));
                 } else {
-                    showToast('⚠️ 有効なルームIDではありません');
+                    showToast(t('toastInvalidRoomId'));
                 }
             } catch (error) {
                 console.error("Error fetching trip:", error);
-                showToast('通信エラーが発生しました');
+                showToast(t('toastNetworkError'));
             }
         } else {
-            showToast('通信の準備ができていません。少し待ってから再試行してください');
+            showToast(t('toastWaitAndRetry'));
         }
     }
 
@@ -749,9 +1064,9 @@
         const days = daysUntil(currentTrip.date);
         const badge = $('#tripCountdown');
         if (days === null) badge.textContent = '';
-        else if (days > 0) badge.textContent = `🗓️ 出発まであと ${days} 日`;
-        else if (days === 0) badge.textContent = '🎉 今日が出発日！';
-        else badge.textContent = `✈️ ${Math.abs(days)}日前に出発`;
+        else if (days > 0) badge.textContent = `${t('departureDaysLeft')}${days}${t('departureDaysUnit')}`;
+        else if (days === 0) badge.textContent = t('departureToday');
+        else badge.textContent = `${t('departedDaysAgo')}${Math.abs(days)}${t('departedDaysAgoUnit')}`;
     }
 
     function renderOverview() {
@@ -827,7 +1142,7 @@
         const entries = (currentTrip.diary || []).sort((a, b) => b.date.localeCompare(a.date));
         const container = $('#diaryEntries');
         if (entries.length === 0) {
-            container.innerHTML = '<div class="schedule-empty">📖 まだ日記がありません。<br>「日記を書く」から最初の一歩を！</div>';
+            container.innerHTML = `<div class="schedule-empty">${t('diaryEmpty')}</div>`;
             return;
         }
         container.innerHTML = entries.map(e => `
@@ -835,10 +1150,10 @@
         <div class="diary-entry-date">📅 ${formatDate(e.date)}</div>
         <div class="diary-entry-title">${escHtml(e.title)}</div>
         <div class="diary-entry-content">${escHtml(e.content)}</div>
-        ${e.photo ? `<img src="${e.photo}" class="diary-entry-photo" alt="写真" />` : ''}
+        ${e.photo ? `<img src="${e.photo}" class="diary-entry-photo" alt="Photo" />` : ''}
         <div class="diary-entry-actions">
-          <button class="btn btn-ghost btn-sm" onclick="TaviNote.editDiary('${e.id}')">✏️ 編集</button>
-          <button class="btn btn-ghost btn-sm" onclick="TaviNote.deleteDiary('${e.id}')">🗑️ 削除</button>
+          <button class="btn btn-ghost btn-sm" onclick="TaviNote.editDiary('${e.id}')">${t('editBtn')}</button>
+          <button class="btn btn-ghost btn-sm" onclick="TaviNote.deleteDiary('${e.id}')">${t('deleteBtn')}</button>
         </div>
       </div>
     `).join('');
@@ -849,7 +1164,7 @@
         const date = $('#inputDiaryDate').value;
         const title = $('#inputDiaryTitle').value.trim();
         const content = $('#inputDiaryContent').value.trim();
-        if (!title) { showToast('タイトルを入力してください'); return; }
+        if (!title) { showToast(t('toastDiaryTitleRequired')); return; }
         if (!currentTrip.diary) currentTrip.diary = [];
 
         const photoPreview = $('#diaryPhotoPreview img');
@@ -872,7 +1187,7 @@
         clearForm('modalDiary');
         renderDiary();
         renderOverview();
-        showToast('📖 日記を保存しました！');
+        showToast(t('toastDiarySaved'));
     }
 
     function editDiary(id) {
@@ -888,12 +1203,12 @@
     }
 
     function deleteDiary(id) {
-        if (!currentTrip || !confirm('この日記を削除しますか？')) return;
+        if (!currentTrip || !confirm(t('confirmDeleteDiary'))) return;
         currentTrip.diary = currentTrip.diary.filter(d => d.id !== id);
         saveData();
         renderDiary();
         renderOverview();
-        showToast('日記を削除しました');
+        showToast(t('toastDiaryDeleted'));
     }
 
     // ========== 場所 ==========
@@ -908,7 +1223,7 @@
             sightseeing: '🏛️', food: '🍽️', hotel: '🏨', shopping: '🛍️', other: '📌'
         };
         if (places.length === 0) {
-            container.innerHTML = '<div class="schedule-empty">📍 場所を追加してみよう！</div>';
+            container.innerHTML = `<div class="schedule-empty">${t('placesEmpty')}</div>`;
         } else {
             container.innerHTML = places.map(p => `
         <div class="place-item" data-place-id="${p.id}" onclick="TaviNote.focusPlace('${p.id}')">
@@ -928,7 +1243,7 @@
     function savePlace() {
         if (!currentTrip) return;
         const name = $('#inputPlaceName').value.trim();
-        if (!name) { showToast('場所の名前を入力してください'); return; }
+        if (!name) { showToast(t('toastPlaceNameRequired')); return; }
         if (!currentTrip.places) currentTrip.places = [];
         currentTrip.places.push({
             id: generateId(),
@@ -944,7 +1259,7 @@
         clearForm('modalPlace');
         renderPlaces();
         renderOverview();
-        showToast(`📍 「${name}」を追加しました！`);
+        showToast(`${t('toastPlaceAdded')}${name}${t('toastPlaceAddedSuffix')}`);
     }
 
     function deletePlace(id) {
@@ -973,19 +1288,19 @@
     // 住所検索（Nominatim）
     async function searchAddress() {
         const addr = $('#inputPlaceAddress').value.trim();
-        if (!addr) { showToast('住所を入力してください'); return; }
+        if (!addr) { showToast(t('toastAddressRequired')); return; }
         try {
             const res = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(addr)}&limit=1`);
             const data = await res.json();
             if (data.length > 0) {
                 $('#inputPlaceLat').value = data[0].lat;
                 $('#inputPlaceLng').value = data[0].lon;
-                showToast('📍 場所が見つかりました！');
+                showToast(t('toastPlaceFound'));
             } else {
-                showToast('場所が見つかりませんでした');
+                showToast(t('toastPlaceNotFound'));
             }
         } catch {
-            showToast('検索中にエラーが発生しました');
+            showToast(t('toastSearchError'));
         }
     }
 
@@ -1036,9 +1351,9 @@
         if (!currentTrip) return;
         const todos = currentTrip.todos || [];
         const container = $('#todoList');
-        const priorityLabels = { high: '🔴 高い', medium: '🟡 ふつう', low: '🟢 低い' };
+        const priorityLabels = { high: t('high'), medium: t('normal'), low: t('low') };
         if (todos.length === 0) {
-            container.innerHTML = '<div class="schedule-empty">✅ やることを追加してみよう！</div>';
+            container.innerHTML = `<div class="schedule-empty">${t('todoEmpty')}</div>`;
             return;
         }
         // ソート：未完了を先、高優先度を先
@@ -1065,7 +1380,7 @@
     function saveTodo() {
         if (!currentTrip) return;
         const text = $('#inputTodoText').value.trim();
-        if (!text) { showToast('やることを入力してください'); return; }
+        if (!text) { showToast(t('toastTodoRequired')); return; }
         if (!currentTrip.todos) currentTrip.todos = [];
         currentTrip.todos.push({
             id: generateId(),
@@ -1080,7 +1395,7 @@
         renderTodos();
         renderCalendar();
         updateTreeAfterTodoChange();
-        showToast('✅ やることを追加しました！');
+        showToast(t('toastTodoAdded'));
     }
 
     function toggleTodo(id) {
@@ -1092,7 +1407,7 @@
         renderTodos();
         renderCalendar();
         updateTreeAfterTodoChange();
-        if (t.done) showToast('🌿 木が少し成長しました！');
+        if (t.done) showToast(TRANSLATIONS[appData.lang || 'ja']['toastTreeGrew']);
     }
 
     function deleteTodo(id) {
@@ -1114,11 +1429,17 @@
         if (!currentTrip) return;
         const year = calendarDate.getFullYear();
         const month = calendarDate.getMonth();
-        $('#calendarTitle').textContent = `${year}年 ${month + 1}月`;
+        const lang = appData.lang || 'ja';
+        if (lang === 'ja') {
+            $('#calendarTitle').textContent = `${year}年 ${month + 1}月`;
+        } else {
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            $('#calendarTitle').textContent = `${monthNames[month]} ${year}`;
+        }
 
         const grid = $('#calendarGrid');
         grid.innerHTML = '';
-        const dayHeaders = ['日', '月', '火', '水', '木', '金', '土'];
+        const dayHeaders = [t('calSun'), t('calMon'), t('calTue'), t('calWed'), t('calThu'), t('calFri'), t('calSat')];
         dayHeaders.forEach(d => {
             const el = document.createElement('div');
             el.className = 'calendar-day-header';
@@ -1310,16 +1631,16 @@
         closeModal('modalEditTrip');
         renderTripDetail();
         renderOverview();
-        showToast('✏️ 旅行情報を更新しました！');
+        showToast(t('toastTripUpdated'));
     }
 
     function deleteTrip() {
-        if (!currentTrip || !confirm('この旅行を削除してもよいですか？\nすべてのデータが消えます。')) return;
+        if (!currentTrip || !confirm(t('confirmDeleteTrip'))) return;
         appData.trips = appData.trips.filter(t => t.id !== currentTrip.id);
         currentTrip = null;
         saveData();
         showView('dashboard');
-        showToast('旅行を削除しました');
+        showToast(t('toastDiaryDeleted'));
     }
 
     // ========== チケット管理 ==========
@@ -1328,7 +1649,7 @@
         if (!currentTrip) return;
         const tickets = currentTrip.tickets || [];
         const container = $('#ticketList');
-        if (tickets.length === 0) { container.innerHTML = '<div class="schedule-empty">🎫 チケットや予約情報を追加しよう！</div>'; return; }
+        if (tickets.length === 0) { container.innerHTML = `<div class="schedule-empty">${t('ticketEmpty')}</div>`; return; }
         container.innerHTML = tickets.map(t => `
             <div class="ticket-card">
                 <div class="ticket-card-actions"><span class="ticket-card-delete" onclick="TaviNote.deleteTicket('${t.id}')">✕</span></div>
@@ -1344,7 +1665,7 @@
     function saveTicket() {
         if (!currentTrip) return;
         const title = $('#inputTicketTitle').value.trim();
-        if (!title) { showToast('タイトルを入力してください'); return; }
+        if (!title) { showToast(t('toastTicketTitleRequired')); return; }
         if (!currentTrip.tickets) currentTrip.tickets = [];
         const preview = $('#ticketImagePreview img');
         currentTrip.tickets.push({
@@ -1353,7 +1674,7 @@
             memo: $('#inputTicketMemo').value.trim(), image: preview ? preview.src : ''
         });
         saveData(); closeModal('modalTicket'); clearForm('modalTicket');
-        renderTickets(); showToast('🎫 チケットを保存しました！');
+        renderTickets(); showToast(t('toastTicketSaved'));
     }
     function deleteTicket(id) {
         if (!currentTrip) return;
@@ -1405,7 +1726,7 @@
         const checked = items.filter(i => i.checked).length;
         const pct = items.length > 0 ? Math.round(checked / items.length * 100) : 0;
         progress.innerHTML = items.length > 0 ? `<div class="packing-progress-bar" style="width:${pct}%"></div><span class="packing-progress-text">${checked}/${items.length} (${pct}%)</span>` : '';
-        if (items.length === 0) { container.innerHTML = '<div class="schedule-empty">👜 テンプレートを選んで持ち物を追加しよう！</div>'; return; }
+        if (items.length === 0) { container.innerHTML = `<div class="schedule-empty">${t('packingEmpty')}</div>`; return; }
         const grouped = {};
         items.forEach(i => { if (!grouped[i.category]) grouped[i.category] = []; grouped[i.category].push(i); });
         let html = '';
@@ -1425,23 +1746,23 @@
     function applyPackingTemplate() {
         if (!currentTrip) return;
         const key = $('#selectPackingTemplate').value;
-        if (!key || !PACKING_TEMPLATES[key]) { showToast('テンプレートを選んでください'); return; }
+        if (!key || !PACKING_TEMPLATES[key]) { showToast(t('toastTemplateRequired')); return; }
         if (!currentTrip.packing) currentTrip.packing = [];
         PACKING_TEMPLATES[key].forEach(t => {
             if (!currentTrip.packing.some(p => p.name === t.name)) {
                 currentTrip.packing.push({ id: generateId(), name: t.name, category: t.cat, checked: false });
             }
         });
-        saveData(); renderPacking(); showToast('👜 テンプレートを適用しました！');
+        saveData(); renderPacking(); showToast(t('toastTemplateApplied'));
     }
     function savePackingItem() {
         if (!currentTrip) return;
         const name = $('#inputPackingItem').value.trim();
-        if (!name) { showToast('アイテム名を入力してください'); return; }
+        if (!name) { showToast(t('toastPackingItemRequired')); return; }
         if (!currentTrip.packing) currentTrip.packing = [];
         currentTrip.packing.push({ id: generateId(), name, category: $('#selectPackingCategory').value, checked: false });
         saveData(); closeModal('modalPackingItem'); clearForm('modalPackingItem');
-        renderPacking(); showToast('👜 持ち物を追加しました！');
+        renderPacking(); showToast(t('toastPackingItemAdded'));
     }
     function togglePacking(id) {
         if (!currentTrip) return;
@@ -1467,26 +1788,26 @@
         const members = currentTrip.members ? currentTrip.members.split(/[,、]/).map(m => m.trim()).filter(Boolean) : [];
         const perPerson = members.length > 0 ? Math.round(total / members.length) : total;
         let html = '';
-        if (budget > 0) html += `<div class="budget-item"><div class="budget-item-label">予算</div><div class="budget-item-value">¥${budget.toLocaleString()}</div></div>`;
-        html += `<div class="budget-item"><div class="budget-item-label">合計支出</div><div class="budget-item-value total">¥${total.toLocaleString()}</div></div>`;
-        if (budget > 0) html += `<div class="budget-item"><div class="budget-item-label">残り</div><div class="budget-item-value" style="color:${total > budget ? 'var(--red)' : 'var(--accent)'}">¥${(budget - total).toLocaleString()}</div></div>`;
-        if (members.length > 0) html += `<div class="budget-item"><div class="budget-item-label">1人あたり</div><div class="budget-item-value">¥${perPerson.toLocaleString()}</div></div>`;
+        if (budget > 0) html += `<div class="budget-item"><div class="budget-item-label">${t('budgetLabelBudget')}</div><div class="budget-item-value">¥${budget.toLocaleString()}</div></div>`;
+        html += `<div class="budget-item"><div class="budget-item-label">${t('budgetLabelTotal')}</div><div class="budget-item-value total">¥${total.toLocaleString()}</div></div>`;
+        if (budget > 0) html += `<div class="budget-item"><div class="budget-item-label">${t('budgetLabelRemaining')}</div><div class="budget-item-value" style="color:${total > budget ? 'var(--red)' : 'var(--accent)'}">¥${(budget - total).toLocaleString()}</div></div>`;
+        if (members.length > 0) html += `<div class="budget-item"><div class="budget-item-label">${t('budgetLabelPerPerson')}</div><div class="budget-item-value">¥${perPerson.toLocaleString()}</div></div>`;
         Object.keys(cats).forEach(c => {
             html += `<div class="budget-item"><div class="budget-item-label">${EXPENSE_ICONS[c] || ''} ${c}</div><div class="budget-item-value">¥${cats[c].toLocaleString()}</div></div>`;
         });
-        $('#budgetSummary').innerHTML = html || '<div style="color:var(--text-muted)">支出を記録すると自動計算されます</div>';
+        $('#budgetSummary').innerHTML = html || `<div style="color:var(--text-muted)">${t('budgetEmpty')}</div>`;
     }
     function renderExpenses() {
         if (!currentTrip) return;
         const expenses = (currentTrip.expenses || []).sort((a, b) => (b.date || '').localeCompare(a.date || ''));
         const container = $('#expenseList');
-        if (expenses.length === 0) { container.innerHTML = '<div class="schedule-empty">💰 支出を記録してみよう！</div>'; } else {
+        if (expenses.length === 0) { container.innerHTML = `<div class="schedule-empty">${t('expenseEmpty')}</div>`; } else {
             container.innerHTML = expenses.map(e => `
                 <div class="expense-item">
                     <span class="expense-item-icon">${EXPENSE_ICONS[e.category] || '📦'}</span>
                     <div class="expense-item-info">
                         <div class="expense-item-title">${escHtml(e.title)}</div>
-                        <div class="expense-item-meta">${e.date ? formatDate(e.date) : ''}${e.payer ? ' ・ ' + escHtml(e.payer) + 'が払い' : ''}</div>
+                        <div class="expense-item-meta">${e.date ? formatDate(e.date) : ''}${e.payer ? ' ・ ' + escHtml(e.payer) + t('paidBy') : ''}</div>
                     </div>
                     <span class="expense-item-amount">¥${(e.amount || 0).toLocaleString()}</span>
                     <span class="expense-item-delete" onclick="TaviNote.deleteExpense('${e.id}')">✕</span>
@@ -1506,12 +1827,12 @@
         const paid = {};
         members.forEach(m => paid[m] = 0);
         expenses.forEach(e => { if (e.payer && paid[e.payer] !== undefined) paid[e.payer] += (e.amount || 0); });
-        let html = '<h4>💸 割り勘ん結果</h4>';
-        html += `<div class="split-row"><span>1人あたり</span><span>¥${perPerson.toLocaleString()}</span></div>`;
+        let html = `<h4>${t('splitTitle')}</h4>`;
+        html += `<div class="split-row"><span>${t('splitPerPerson')}</span><span>¥${perPerson.toLocaleString()}</span></div>`;
         members.forEach(m => {
             const diff = (paid[m] || 0) - perPerson;
-            if (diff > 0) html += `<div class="split-row receives"><span>${escHtml(m)}</span><span>+¥${diff.toLocaleString()} 受け取り</span></div>`;
-            else if (diff < 0) html += `<div class="split-row owes"><span>${escHtml(m)}</span><span>-¥${Math.abs(diff).toLocaleString()} 支払い</span></div>`;
+            if (diff > 0) html += `<div class="split-row receives"><span>${escHtml(m)}</span><span>+¥${diff.toLocaleString()}${t('splitReceive')}</span></div>`;
+            else if (diff < 0) html += `<div class="split-row owes"><span>${escHtml(m)}</span><span>-¥${Math.abs(diff).toLocaleString()}${t('splitPay')}</span></div>`;
             else html += `<div class="split-row"><span>${escHtml(m)}</span><span>±0</span></div>`;
         });
         container.innerHTML = html;
@@ -1520,14 +1841,14 @@
         if (!currentTrip) return;
         const title = $('#inputExpenseTitle').value.trim();
         const amount = parseInt($('#inputExpenseAmount').value) || 0;
-        if (!title) { showToast('何に使ったか入力してください'); return; }
+        if (!title) { showToast(t('toastExpenseRequired')); return; }
         if (!currentTrip.expenses) currentTrip.expenses = [];
         currentTrip.expenses.push({
             id: generateId(), title, amount, category: $('#selectExpenseCategory').value,
             payer: $('#inputExpensePayer').value.trim(), date: $('#inputExpenseDate').value
         });
         saveData(); closeModal('modalExpense'); clearForm('modalExpense');
-        renderBudget(); renderExpenses(); showToast('💰 支出を記録しました！');
+        renderBudget(); renderExpenses(); showToast(t('toastExpenseSaved'));
     }
     function deleteExpense(id) {
         if (!currentTrip) return;
@@ -1540,7 +1861,7 @@
         if (!currentTrip) return;
         const polls = currentTrip.polls || [];
         const container = $('#pollList');
-        if (polls.length === 0) { container.innerHTML = '<div class="schedule-empty">🗳️ 投票を作ってみんなの意見を聞こう！</div>'; return; }
+        if (polls.length === 0) { container.innerHTML = `<div class="schedule-empty">${t('pollEmpty')}</div>`; return; }
         container.innerHTML = polls.map(poll => {
             const totalVotes = poll.options.reduce((s, o) => s + o.votes, 0);
             return `
@@ -1552,10 +1873,10 @@
                     <div class="poll-option" onclick="TaviNote.votePoll('${poll.id}', ${i})">
                         <span class="poll-option-label">${escHtml(opt.text)}</span>
                         <div class="poll-option-bar"><div class="poll-option-fill" style="width:${pct}%"></div></div>
-                        <span class="poll-option-votes">${opt.votes}票</span>
+                        <span class="poll-option-votes">${opt.votes}${t('voteCount')}</span>
                     </div>`;
             }).join('')}
-                <div class="poll-card-actions"><span class="poll-delete" onclick="TaviNote.deletePoll('${poll.id}')">🗑️ 削除</span></div>
+                <div class="poll-card-actions"><span class="poll-delete" onclick="TaviNote.deletePoll('${poll.id}')">${t('voteDeleteBtn')}</span></div>
             </div>`;
         }).join('');
     }
@@ -1563,12 +1884,12 @@
         if (!currentTrip) return;
         const question = $('#inputPollQuestion').value.trim();
         const optionsText = $('#inputPollOptions').value.trim();
-        if (!question || !optionsText) { showToast('質問と選択肢を入力してください'); return; }
+        if (!question || !optionsText) { showToast(t('toastPollRequired')); return; }
         const options = optionsText.split('\n').map(t => t.trim()).filter(Boolean).map(t => ({ text: t, votes: 0 }));
         if (!currentTrip.polls) currentTrip.polls = [];
         currentTrip.polls.push({ id: generateId(), question, options });
         saveData(); closeModal('modalPoll'); clearForm('modalPoll');
-        renderPolls(); showToast('🗳️ 投票を作成しました！');
+        renderPolls(); showToast(t('toastPollCreated'));
     }
     function votePoll(pollId, optIndex) {
         if (!currentTrip) return;
@@ -1586,7 +1907,7 @@
         if (!currentTrip) return;
         const reminders = (currentTrip.reminders || []).sort((a, b) => (a.date || '').localeCompare(b.date || ''));
         const container = $('#reminderList');
-        if (reminders.length === 0) { container.innerHTML = '<div style="color:var(--text-muted);font-size:13px;">⏰ リマインダーを追加して忘れもの防止！</div>'; return; }
+        if (reminders.length === 0) { container.innerHTML = `<div style="color:var(--text-muted);font-size:13px;">${t('reminderEmpty')}</div>`; return; }
         const today = new Date().toISOString().split('T')[0];
         container.innerHTML = reminders.map(r => {
             const cls = r.date < today ? 'overdue' : r.date <= today ? '' : daysUntil(r.date) <= 3 ? 'upcoming' : '';
@@ -1601,11 +1922,11 @@
     function saveReminder() {
         if (!currentTrip) return;
         const text = $('#inputReminderText').value.trim();
-        if (!text) { showToast('内容を入力してください'); return; }
+        if (!text) { showToast(t('toastReminderRequired')); return; }
         if (!currentTrip.reminders) currentTrip.reminders = [];
         currentTrip.reminders.push({ id: generateId(), text, date: $('#inputReminderDate').value });
         saveData(); closeModal('modalReminder'); clearForm('modalReminder');
-        renderReminders(); showToast('⏰ リマインダーを追加しました！');
+        renderReminders(); showToast(t('toastReminderAdded'));
     }
     function deleteReminder(id) {
         if (!currentTrip) return;
@@ -1617,7 +1938,7 @@
     function convertCurrency() {
         const amount = parseFloat($('#currencyAmount').value) || 0;
         const rate = parseFloat($('#currencyRate').value) || 0;
-        if (rate === 0) { showToast('レートを入力してください'); return; }
+        if (rate === 0) { showToast(t('toastCurrencyRateRequired')); return; }
         const result = amount * rate;
         const from = $('#currencyFrom').value;
         const to = $('#currencyTo').value;
@@ -1630,15 +1951,15 @@
         const from = $('#currencyFrom').value;
         const to = $('#currencyTo').value;
         try {
-            showToast('🌐 レートを取得中...');
+            showToast(t('toastCurrencyFetching'));
             const res = await fetch(`https://open.er-api.com/v6/latest/${from}`);
             const data = await res.json();
             if (data.rates && data.rates[to]) {
                 $('#currencyRate').value = data.rates[to];
                 showToast(`✅ 1 ${from} = ${data.rates[to]} ${to}`);
                 convertCurrency();
-            } else { showToast('レートが見つかりませんでした'); }
-        } catch { showToast('レートの取得に失敗しました'); }
+            } else { showToast(t('toastCurrencyNotFound')); }
+        } catch { showToast(t('toastCurrencyFetchFailed')); }
     }
 
     // ========== 周辺検索 ==========
@@ -1652,21 +1973,21 @@
         toilet: '["amenity"="toilets"]'
     };
     function getLocation() {
-        if (!navigator.geolocation) { showToast('GPSが使えません'); return; }
-        $('#nearbyStatus').textContent = '取得中...';
+        if (!navigator.geolocation) { showToast(t('toastGpsUnavailable')); return; }
+        $('#nearbyStatus').textContent = t('nearbyFetching');
         navigator.geolocation.getCurrentPosition(pos => {
             userLat = pos.coords.latitude; userLng = pos.coords.longitude;
-            $('#nearbyStatus').textContent = `✅ 取得成功 (${userLat.toFixed(4)}, ${userLng.toFixed(4)})`;
+            $('#nearbyStatus').textContent = `${t('nearbySuccess')} (${userLat.toFixed(4)}, ${userLng.toFixed(4)})`;
             if (!nearbyMap) {
                 nearbyMap = L.map('nearbyMap').setView([userLat, userLng], 15);
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(nearbyMap);
             } else { nearbyMap.setView([userLat, userLng], 15); }
             L.marker([userLat, userLng]).addTo(nearbyMap).bindPopup('📍 現在地').openPopup();
             searchNearby();
-        }, () => { $('#nearbyStatus').textContent = '❌ 位置情報を取得できませんでした'; showToast('位置情報の取得に失敗しました'); });
+        }, () => { $('#nearbyStatus').textContent = t('nearbyFailed'); showToast(t('nearbyLocationFailed')); });
     }
     async function searchNearby() {
-        if (!userLat || !userLng) { showToast('まず現在地を取得してください'); return; }
+        if (!userLat || !userLng) { showToast(t('nearbyFirst')); return; }
         const active = document.querySelector('[data-nearby].active');
         const cat = active ? active.dataset.nearby : 'convenience';
         const tag = NEARBY_TAGS[cat] || NEARBY_TAGS.convenience;
@@ -1677,16 +1998,16 @@
             const data = await res.json();
             nearbyMarkers.forEach(m => nearbyMap.removeLayer(m)); nearbyMarkers = [];
             const results = $('#nearbyResults');
-            if (data.elements.length === 0) { results.innerHTML = '<div style="color:var(--text-muted);text-align:center;padding:20px;">近くに見つかりませんでした</div>'; return; }
+            if (data.elements.length === 0) { results.innerHTML = `<div style="color:var(--text-muted);text-align:center;padding:20px;">${t('nearbyNone')}</div>`; return; }
             results.innerHTML = data.elements.map(el => {
-                const name = el.tags?.name || '名称不明';
+                const name = el.tags?.name || t('nearbyNoName');
                 const dist = Math.round(calcDistance(userLat, userLng, el.lat, el.lon));
                 const marker = L.marker([el.lat, el.lon]).addTo(nearbyMap).bindPopup(name);
                 nearbyMarkers.push(marker);
-                return `<div class="nearby-item"><span class="nearby-item-icon">${active?.textContent?.trim().charAt(0) || '📍'}</span><div class="nearby-item-info"><div class="nearby-item-name">${escHtml(name)}</div><div class="nearby-item-distance">約${dist}m</div></div></div>`;
+                return `<div class="nearby-item"><span class="nearby-item-icon">${active?.textContent?.trim().charAt(0) || '📍'}</span><div class="nearby-item-info"><div class="nearby-item-name">${escHtml(name)}</div><div class="nearby-item-distance">${t('nearbyAbout')}${dist}${t('nearbyMeters')}</div></div></div>`;
             }).join('');
-            showToast(`📍 ${data.elements.length}件見つかりました！`);
-        } catch { showToast('検索中にエラーが発生しました'); }
+            showToast(`📍 ${data.elements.length}${t('nearbyFound')}`);
+        } catch { showToast(t('toastSearchError')); }
     }
     function calcDistance(lat1, lon1, lat2, lon2) {
         const R = 6371000;
@@ -1698,24 +2019,24 @@
     // ========== 旅のしおり ==========
     function exportShiori() {
         if (!currentTrip) return;
-        const t = currentTrip;
-        const schedule = (t.schedule || []).sort((a, b) => (a.date || '').localeCompare(b.date || '') || (a.startTime || '').localeCompare(b.startTime || ''));
-        const places = t.places || [];
-        let html = `<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><title>旅のしおり - ${escHtml(t.name)}</title>
+        const trip = currentTrip;
+        const schedule = (trip.schedule || []).sort((a, b) => (a.date || '').localeCompare(b.date || '') || (a.startTime || '').localeCompare(b.startTime || ''));
+        const places = trip.places || [];
+        let html = `<!DOCTYPE html><html lang="${appData.lang || 'ja'}"><head><meta charset="UTF-8"><title>${appData.lang === 'en' ? 'Itinerary' : '旅のしおり'} - ${escHtml(trip.name)}</title>
         <style>body{font-family:sans-serif;max-width:700px;margin:0 auto;padding:24px;color:#333;}
         h1{text-align:center;color:#7CB69D;border-bottom:3px solid #7CB69D;padding-bottom:12px;}
         h2{color:#7CB69D;margin-top:24px;} .info{background:#f5f5f5;padding:16px;border-radius:8px;margin:12px 0;}
         .item{padding:8px 0;border-bottom:1px dashed #ddd;} @media print{body{padding:0;}}</style></head><body>
-        <h1>🗺️ ${escHtml(t.name)}</h1>
-        <div class="info">✈️ <b>日程:</b> ${formatDate(t.date)}${t.endDate ? ' 〜 ' + formatDate(t.endDate) : ''}<br>
-        👥 <b>メンバー:</b> ${escHtml(t.members) || '未設定'}<br>
-        💰 <b>予算:</b> ${escHtml(t.budget) || '未設定'}</div>`;
+        <h1>🗺️ ${escHtml(trip.name)}</h1>
+        <div class="info">✈️ <b>${t('shioriDateLabel')}</b> ${formatDate(trip.date)}${trip.endDate ? ' 〜 ' + formatDate(trip.endDate) : ''}<br>
+        👥 <b>${t('shioriMembersLabel')}</b> ${escHtml(trip.members) || t('shioriNotSet')}<br>
+        💰 <b>${t('shioriBudgetLabel')}</b> ${escHtml(trip.budget) || t('shioriNotSet')}</div>`;
         if (places.length > 0) {
-            html += '<h2>📍 行きたい場所</h2>';
+            html += `<h2>${t('shioriPlaces')}</h2>`;
             places.forEach(p => { html += `<div class="item">${escHtml(p.name)}${p.memo ? ' - ' + escHtml(p.memo) : ''}</div>`; });
         }
         if (schedule.length > 0) {
-            html += '<h2>📅 スケジュール</h2>';
+            html += `<h2>${t('shioriSchedule')}</h2>`;
             let curDate = '';
             schedule.forEach(s => {
                 if (s.date !== curDate) { curDate = s.date; html += `<h3>${formatDate(s.date)}</h3>`; }
@@ -1725,7 +2046,7 @@
         html += '</body></html>';
         const w = window.open('', '_blank');
         w.document.write(html); w.document.close();
-        showToast('📄 しおりを作成しました！印刷してお使いください');
+        showToast(t('toastShioriCreated'));
     }
 
     // ========== メモボード ==========
@@ -1755,7 +2076,7 @@
 
     function saveMemo() {
         const text = $('#inputMemoText').value.trim();
-        if (!text) { showToast('メモの内容を入力してください'); return; }
+        if (!text) { showToast(t('toastMemoRequired')); return; }
         if (!appData.memos) appData.memos = [];
         const colorEl = document.querySelector('input[name="memoColor"]:checked');
         const color = colorEl ? colorEl.value : 'yellow';
@@ -1769,7 +2090,7 @@
         closeModal('modalMemo');
         clearForm('modalMemo');
         renderMemoBoard();
-        showToast('📌 メモをボードに貼りました！');
+        showToast(t('toastMemoPinned'));
     }
 
     function deleteMemo(id) {
@@ -1777,7 +2098,7 @@
         appData.memos = appData.memos.filter(m => m.id !== id);
         saveData();
         renderMemoBoard();
-        showToast('メモを外しました');
+        showToast(t('toastMemoRemoved'));
     }
 
     // ========== 検索メモ ==========
@@ -1788,7 +2109,7 @@
     function saveSearchMemo() {
         appData.searchMemo = $('#searchMemo').value;
         saveData();
-        showToast('🗒️ メモを保存しました！');
+        showToast(t('toastMemoSaved'));
     }
 
     // ========== モーダル共通 ==========
@@ -1984,8 +2305,7 @@
         if (btnCopyRoomId) {
             btnCopyRoomId.addEventListener('click', () => {
                 navigator.clipboard.writeText($('#displayRoomId').value).then(() => {
-                    const msg = appData.lang === 'en' ? '📋 Copied Room ID!' : '📋 ルームIDをコピーしました！';
-                    showToast(msg);
+                    showToast(t('toastCopiedRoomId'));
                 });
             });
         }
@@ -1994,8 +2314,7 @@
         if (btnCopyShareLink) {
             btnCopyShareLink.addEventListener('click', () => {
                 navigator.clipboard.writeText($('#displayShareLink').value).then(() => {
-                    const msg = appData.lang === 'en' ? '📋 Copied Share Link!' : '📋 招待リンクをコピーしました！';
-                    showToast(msg);
+                    showToast(t('toastCopiedShareLink'));
                 });
             });
         }
@@ -2114,7 +2433,7 @@
 
     function deletePhoto(id) {
         if (!currentTrip || !currentTrip.photos) return;
-        if (!confirm('この写真を削除しますか？')) return;
+        if (!confirm(t('confirmDeletePhoto'))) return;
         currentTrip.photos = currentTrip.photos.filter(p => p.id !== id);
         saveData();
         renderPhotos();
